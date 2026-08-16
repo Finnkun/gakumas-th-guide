@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://finnkun.github.io/gakumas-th-guide/sitemap.xml

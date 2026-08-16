@@ -1,0 +1,1 @@
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/804181":{"title":"【GakuM@S】เงื่อนไขการปลดล็อกและเอฟเฟกต์ของความสนุกครั้งแรก 【Gakuen Idol Master】","updated":"","sections":[],"originalTitle":"【学マス】初めてのたのしみの解放条件と効果【学園アイドルマスター】","originalSections":[]}};

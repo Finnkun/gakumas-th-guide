@@ -106,7 +106,7 @@ for kind,entries in catalog_data.items():
             if value:fields[field]=cache.get(value,value)
         catalog_translations[f'{kind}:{entry["id"]}']=fields
 runtime='window.catalogTranslations = '+json.dumps(catalog_translations,ensure_ascii=False,separators=(',',':'))+';\n'
-runtime+='[["pidols",window.pidols],["supports",window.supportCards],["skills",window.skillCards],["items",window.pItems],["drinks",window.pDrinks]].forEach(([kind,list])=>list.forEach(item=>{const translated=window.catalogTranslations[`${kind}:${item.id}`]||{};Object.entries(translated).forEach(([field,value])=>{if(field==="name"||field==="short")return;item[`original${field[0].toUpperCase()+field.slice(1)}`]=item[field];item[field]=value})}));\n'
+runtime+='[["pidols",window.pidols||[]],["supports",window.supportCards||[]],["skills",window.skillCards||[]],["items",window.pItems||[]],["drinks",window.pDrinks||[]]].forEach(([kind,list])=>list.forEach(item=>{const translated=window.catalogTranslations[`${kind}:${item.id}`]||{};Object.entries(translated).forEach(([field,value])=>{if(field==="name"||field==="short")return;item[`original${field[0].toUpperCase()+field.slice(1)}`]=item[field];item[field]=value})}));\n'
 (ROOT/'catalog-translations.js').write_text(runtime,encoding='utf-8')
 remaining=[]
 def find_remaining(value):

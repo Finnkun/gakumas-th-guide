@@ -8,9 +8,13 @@
   <meta property="og:title" content="GAKUMAS TH — คู่มือโปรดิวเซอร์ภาษาไทย" />
   <meta property="og:description" content="ฐานข้อมูลและคู่มือ Gakuen Idolmaster ภาษาไทยสำหรับ P Idol, Support, Skill, Item และ Scenario" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/game8/guide-home.png" />
+  <meta property="og:site_name" content="GAKUMAS TH" />
+  <meta property="og:url" content="https://finnkun.github.io/gakumas-th-guide/" />
+  <meta property="og:image" content="https://finnkun.github.io/gakumas-th-guide/assets/game8/guide-home.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>GAKUMAS TH — คู่มือโปรดิวเซอร์ภาษาไทย</title>
   <link rel="manifest" href="site.webmanifest" />
+  <link rel="canonical" href="https://finnkun.github.io/gakumas-th-guide/" />
   <link rel="icon" href="assets/app-icon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +28,10 @@
   <link rel="stylesheet" href="cycle89.css" />
   <link rel="stylesheet" href="detail-links.css" />
   <style>.support-toolbar{grid-template-columns:1fr repeat(4,auto)}.footer-links{display:flex;flex-direction:column;gap:8px}.footer-links a{color:var(--lime);text-decoration:none;font-weight:700}</style>
+  <link rel="stylesheet" href="p0.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
   <div class="noise"></div>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="GAKUMAS TH หน้าแรก">
@@ -45,7 +51,7 @@
   </header>
   <nav class="mobile-nav" id="mobileNav" aria-label="เมนูมือถือ"><a href="#guides">คู่มือ</a><a href="catalog.html?type=pidols">P Idol</a><a href="catalog.html?type=supports">Support</a><a href="catalog.html?type=skills">Skill</a><a href="catalog.html?type=items">P Item</a><a href="catalog.html?type=drinks">P Drink</a><a href="#scenarios">Scenario</a><a href="#glossary">คำศัพท์</a></nav>
 
-  <main id="top">
+  <main id="main-content">
     <section class="hero">
       <div class="hero-copy">
         <div class="eyebrow"><span class="live-dot"></span> FAN GUIDE · ภาษาไทย</div>
@@ -82,19 +88,19 @@
         <p>ตารางสั้น ๆ สำหรับเช็กก่อนเข้าเกม<br><span>เวลาไทยช้ากว่าเวลาญี่ปุ่น 2 ชั่วโมง</span></p>
       </div>
       <div class="update-grid">
-        <article class="feature-card pink">
+        <article class="feature-card pink" data-event-end="2026-08-17T21:59:00+07:00" data-event-source="https://game8.jp/gakuen-idolmaster">
           <span class="card-kicker">GACHA · ถึง 17 ส.ค.</span>
           <h3>Semi Blue<br><span>กลับมาแล้ว</span></h3>
           <p>ตู้รีรัน セミブルー และ STEP UP ร่วมกับ 冠菊</p>
           <div class="card-meta"><span>復刻</span><span>P IDOL</span><span>SUPPORT</span></div>
         </article>
-        <article class="feature-card lime">
+        <article class="feature-card lime" data-event-end="2026-09-04T21:59:00+07:00" data-event-source="https://game8.jp/gakuen-idolmaster">
           <span class="card-kicker">MISSION · ถึง 4 ก.ย.</span>
           <h3>STEP 3<br><span>Panel Mission</span></h3>
           <p>เคลียร์ภารกิจบนแผง รับตั๋วการันตี SSR P Idol</p>
           <div class="card-meta"><span>EVENT</span><span>SSR確定</span></div>
         </article>
-        <article class="feature-card ink">
+        <article class="feature-card ink" data-event-end="2026-11-16T21:59:00+07:00" data-event-source="https://game8.jp/gakuen-idolmaster">
           <span class="card-kicker">CAMPAIGN · ถึง 16 พ.ย.</span>
           <h3>เพิ่มค่าความสนิท<br><span>親愛度 BOOST</span></h3>
           <p>ปั้นไอดอลเป้าหมายและทำเงื่อนไขเพื่อรับค่าความสนิทเพิ่ม</p>
@@ -126,12 +132,12 @@
         <article class="guide-card" data-search="HIF โบนัส S4 support memory">
           <div class="guide-icon">H</div><span class="tag hot">HOT</span>
           <h3>คู่มือ H.I.F</h3><p>โบนัส, P Item, Memory และแนวทางทำแรงก์ S4+</p>
-          <button class="read-more article-open" data-article="hif">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/hif/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="beginner มือใหม่ เริ่มเล่น reroll">
           <div class="guide-icon">B</div><span class="tag">BASIC</span>
           <h3>มือใหม่เริ่มตรงนี้</h3><p>ลำดับปลดล็อก การใช้ทรัพยากร และสิ่งที่ไม่ควรพลาด</p>
-          <button class="read-more article-open" data-article="beginner">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/beginner/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="sense logic anomaly เซนส์ ลอจิก อโนมาลี">
           <div class="guide-icon">3</div><span class="tag">SYSTEM</span>
@@ -146,72 +152,72 @@
         <article class="guide-card" data-search="reroll รีโรล กาชา เริ่มบัญชี">
           <div class="guide-icon">R</div><span class="tag">GACHA</span>
           <h3>คู่มือรีโรล</h3><p>เป้าหมาย เวลาที่ใช้ และขั้นตอนเริ่มบัญชีใหม่แบบย่อ</p>
-          <button class="read-more article-open" data-article="reroll">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/reroll/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="tier character ตัวละคร strongest ranking">
           <div class="guide-icon">S</div><span class="tag hot">14 AUG</span>
           <h3>Tier ตัวละคร</h3><p>อ่านอันดับให้ถูกโหมด พร้อมเกณฑ์ประเมินและตัวเด่นล่าสุด</p>
-          <button class="read-more article-open" data-article="tier">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/tier/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="support card tier ซัพพอร์ต การ์ด">
           <div class="guide-icon">＋</div><span class="tag">SUPPORT</span>
           <h3>เลือกการ์ดซัพพอร์ต</h3><p>ความสำคัญของ SP Lesson, โบนัสค่าสถานะ และความเข้ากับ H.I.F</p>
-          <button class="read-more article-open" data-article="support">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/support/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="sense センス สมาธิ ฟอร์มดี">
           <div class="guide-icon">Se</div><span class="tag">PLAN</span>
           <h3>วิธีเล่น Sense</h3><p>สะสม 集中 และ 好調 ก่อนปิดเกมด้วยคอมโบทำคะแนน</p>
-          <button class="read-more article-open" data-article="sense">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/sense/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="logic ロジック ความประทับใจ แรงจูงใจ">
           <div class="guide-icon">Lo</div><span class="tag">PLAN</span>
           <h3>วิธีเล่น Logic</h3><p>เลือกระหว่างแกน 好印象 หรือ やる気 + 元気</p>
-          <button class="read-more article-open" data-article="logic">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/logic/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="anomaly アノマリー 強気 温存 全力">
           <div class="guide-icon">An</div><span class="tag">PLAN</span>
           <h3>วิธีเล่น Anomaly</h3><p>สลับ 温存 กับ 強気 และเลือกจังหวะ 全力</p>
-          <button class="read-more article-open" data-article="anomaly">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/anomaly/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="skill card p item drink สกิล ไอเทม เครื่องดื่ม">
           <div class="guide-icon">DB</div><span class="tag">DATABASE</span>
           <h3>การ์ดและไอเทม</h3><p>วิธีอ่าน Skill Card, P Item และ P Drink โดยไม่เลือกผิดสาย</p>
-          <button class="read-more article-open" data-article="database">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/database/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="初 produce โปรดิวซ์ scenario">
           <div class="guide-icon">初</div><span class="tag">SCENARIO</span><h3>คู่มือ Produce「初」</h3><p>ตั้งเป้าค่าสถานะ วางเด็ค และบริหารพลังงานตั้งแต่ต้นรอบ</p>
-          <button class="read-more article-open" data-article="produce">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/produce/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="pro difficulty ระดับโปร regular">
           <div class="guide-icon">P</div><span class="tag">DIFFICULTY</span><h3>ผ่านระดับ Pro</h3><p>จัดลำดับ Lesson, 授業, 相談 และรักษาพลังงานให้พอ</p>
-          <button class="read-more article-open" data-article="pro">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/pro/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="memory เมโมรี 厳選 farming">
           <div class="guide-icon">M</div><span class="tag">BUILD</span><h3>สร้างและคัด Memory</h3><p>เลือกคีย์สกิล โบนัสค่าสถานะ และวิธีลดตัวเลือกสุ่ม</p>
-          <button class="read-more article-open" data-article="memory">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/memory/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="親愛度 affection bond ความสนิท">
           <div class="guide-icon">♥</div><span class="tag">PROGRESS</span><h3>ค่าความสนิท 1–37</h3><p>ช่วงที่ใช้เงื่อนไข ช่วงที่ใช้แต้ม และรางวัลสำคัญ</p>
-          <button class="read-more article-open" data-article="affection">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/affection/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="A+ true end final exam 15500">
           <div class="guide-icon">A+</div><span class="tag">GOAL</span><h3>ทำ A+ และ True End</h3><p>เป้าค่าสถานะประมาณ 3,000 และคะแนนสอบปลายภาค</p>
-          <button class="read-more article-open" data-article="aplus">อ่านคู่มือ <span>→</span></button>
+          <a class="read-more article-link" href="guides/aplus/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="NIA next idol audition scenario">
-          <div class="guide-icon">N</div><span class="tag">SCENARIO</span><h3>คู่มือ N.I.A</h3><p>การสอบ 3 รอบ, SP Lesson, 営業 และ 特別指導</p><button class="read-more article-open" data-article="nia">อ่านคู่มือ <span>→</span></button>
+          <div class="guide-icon">N</div><span class="tag">SCENARIO</span><h3>คู่มือ N.I.A</h3><p>การสอบ 3 รอบ, SP Lesson, 営業 และ 特別指導</p><a class="read-more article-link" href="guides/nia/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="contest pvp memory คอนเทสต์">
-          <div class="guide-icon">C</div><span class="tag">PVP</span><h3>Contest</h3><p>จัดทีมจาก Memory อ่าน Stage Effect และวางแผนตามฤดูกาล</p><button class="read-more article-open" data-article="contest">อ่านคู่มือ <span>→</span></button>
+          <div class="guide-icon">C</div><span class="tag">PVP</span><h3>Contest</h3><p>จัดทีมจาก Memory อ่าน Stage Effect และวางแผนตามฤดูกาล</p><a class="read-more article-link" href="guides/contest/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="gacha เพชร banner pity กาชา">
-          <div class="guide-icon">G</div><span class="tag">GACHA</span><h3>วางแผนกาชา</h3><p>เช็ก Limited, ระยะเวลา, P Idol/Support และงบก่อนกด</p><button class="read-more article-open" data-article="gacha">อ่านคู่มือ <span>→</span></button>
+          <div class="guide-icon">G</div><span class="tag">GACHA</span><h3>วางแผนกาชา</h3><p>เช็ก Limited, ระยะเวลา, P Idol/Support และงบก่อนกด</p><a class="read-more article-link" href="guides/gacha/" aria-label="อ่านคู่มือ →">อ่านคู่มือ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="character directory profile ตัวละคร รายชื่อ">
-          <div class="guide-icon">13</div><span class="tag">DIRECTORY</span><h3>สารบัญตัวละคร</h3><p>ชื่อญี่ปุ่นและแนวทางเลือก P Idol แต่ละเวอร์ชัน</p><button class="read-more article-open" data-article="characters">เปิดสารบัญ <span>→</span></button>
+          <div class="guide-icon">13</div><span class="tag">DIRECTORY</span><h3>สารบัญตัวละคร</h3><p>ชื่อญี่ปุ่นและแนวทางเลือก P Idol แต่ละเวอร์ชัน</p><a class="read-more article-link" href="guides/characters/" aria-label="เปิดสารบัญ →">เปิดสารบัญ <span>→</span></a>
         </article>
         <article class="guide-card" data-search="support directory rarity vo da vi plan">
-          <div class="guide-icon">S</div><span class="tag">DIRECTORY</span><h3>สารบัญซัพพอร์ต</h3><p>วิธีกรองตามระดับ ค่าสถานะ Plan และแหล่งที่มา</p><button class="read-more article-open" data-article="supportdb">เปิดสารบัญ <span>→</span></button>
+          <div class="guide-icon">S</div><span class="tag">DIRECTORY</span><h3>สารบัญซัพพอร์ต</h3><p>วิธีกรองตามระดับ ค่าสถานะ Plan และแหล่งที่มา</p><a class="read-more article-link" href="guides/supportdb/" aria-label="เปิดสารบัญ →">เปิดสารบัญ <span>→</span></a>
         </article>
       </div>
     </section>
@@ -312,7 +318,7 @@
   <footer>
     <div class="brand footer-brand"><span class="brand-mark">G</span><span>GAKUMAS <b>TH</b></span></div>
     <p>คู่มือแฟนเมดภาษาไทย · ไม่ได้ดำเนินงานหรือรับรองอย่างเป็นทางการโดย Game8<br>Original guide/content: Game8 · ภาพที่ใช้มาจากหน้าคู่มือต้นฉบับที่ได้รับอนุญาต</p>
-    <div class="footer-links"><a href="https://game8.jp/gakuen-idolmaster" target="_blank" rel="noreferrer">แหล่งอ้างอิง Game8 ↗</a><a href="CONTENT_RIGHTS.md">ขอบเขตสิทธิ์และเครดิต</a></div>
+    <div class="footer-links"><a href="https://game8.jp/gakuen-idolmaster" target="_blank" rel="noreferrer">แหล่งอ้างอิง Game8 ↗</a><a href="rights.html">ขอบเขตสิทธิ์และเครดิต</a></div>
   </footer>
 
   <dialog id="searchDialog">
@@ -328,11 +334,8 @@
   </dialog>
   <div class="toast" id="toast" role="status"></div>
   <script src="characters.js"></script>
-  <script src="pidols.js"></script>
-  <script src="supportcards.js"></script>
-  <script src="skillcards.js"></script>
-  <script src="itemdata.js"></script>
-  <script src="catalog-translations.js"></script>
+  <script src="home-data.js"></script>
+  <script src="search-utils.js"></script>
   <script src="scenarios.js"></script>
   <script src="articles.js"></script>
   <script src="app.js"></script>

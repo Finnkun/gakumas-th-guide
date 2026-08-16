@@ -57,8 +57,8 @@ const characterGrid=document.querySelector("#characterGrid");
 const characterSearch=document.querySelector("#characterSearch");
 const characterEmpty=document.querySelector("#characterEmpty");
 function renderCharacters(){
-  const q=(characterSearch?.value||"").trim().toLowerCase();
-  const list=window.characterProfiles.filter(c=>Object.values(c).join(" ").toLowerCase().includes(q));
+  const q=(characterSearch?.value||"").trim();
+  const list=window.characterProfiles.filter(c=>window.GakumasSearch.matches(c,q));
   characterGrid.innerHTML=list.map((c,i)=>`<article class="character-card" style="--character:${c.accent}"><div class="character-top"><span class="character-index">${String(i+1).padStart(2,"0")}</span><div class="character-monogram">${c.jp.slice(-1)}</div></div><div class="character-name"><small>${c.kana}</small><h3>${c.jp}</h3><span>${c.roman}</span></div><div class="character-facts"><span><b>${c.age}</b> ปี</span><span><b>${c.height}</b> cm</span><span><b>${c.blood}</b> กรุ๊ปเลือด</span></div><p>${c.bio}</p><details><summary>ข้อมูลเพิ่มเติม</summary><dl><div><dt>วันเกิด</dt><dd>${c.birthday}</dd></div><div><dt>บ้านเกิด</dt><dd>${c.origin}</dd></div><div><dt>ผู้พากย์</dt><dd>${c.cv}</dd></div></dl></details></article>`).join("");
   characterEmpty.hidden=list.length>0;
 }
@@ -140,11 +140,12 @@ const quickResults = document.querySelector("#quickResults");
 const menuToggle=document.querySelector("#menuToggle"),mobileNav=document.querySelector("#mobileNav");
 menuToggle?.addEventListener("click",()=>{const open=mobileNav.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(open))});
 mobileNav?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mobileNav.classList.remove("open");menuToggle.setAttribute("aria-expanded","false")}));
-document.querySelector("#searchToggle").addEventListener("click", () => { dialog.showModal(); setTimeout(()=>quickSearch.focus(),80); });
+document.querySelector("#searchToggle").addEventListener("click", () => { dialog.showModal();if(!window.searchIndex&&!document.querySelector('script[data-search-index]')){const script=document.createElement("script");script.src="search-index.js";script.dataset.searchIndex="";script.onload=()=>quickSearch.dispatchEvent(new Event("input"));document.head.append(script)}setTimeout(()=>quickSearch.focus(),80); });
 document.querySelector("#dialogClose").addEventListener("click", () => dialog.close());
 quickSearch.addEventListener("input", () => {
-  const q = quickSearch.value.toLowerCase().trim();
+  const q = quickSearch.value.trim();
   if(!q){quickResults.innerHTML='<p class="search-hint">ค้นหาได้ทั้ง P Idol, Support, Skill, Item, Drink, Scenario และคำศัพท์</p>'; return;}
+  if(window.searchIndex){const labels={pidols:"P IDOL",supports:"SUPPORT",skills:"SKILL",items:"P ITEM",drinks:"P DRINK"};const found=window.searchIndex.filter(x=>window.GakumasSearch.matches(`${x.name} ${x.text}`,q)).slice(0,18);quickResults.innerHTML=found.length?found.map(x=>`<a class="quick-result" href="database/${x.type}/${encodeURIComponent(x.id)}/"><small>${labels[x.type]}</small> ${x.name}</a>`).join(""):'<p class="search-hint">ไม่พบข้อมูล ลองชื่อไทย Romaji หรือชื่อญี่ปุ่น</p>';return}
   const groups=[
    ["P IDOL","#pidols",window.pidols,p=>`${p.short} — ${p.plan} ${p.tier}`],
    ["SUPPORT","#supports",window.supportCards,p=>`${p.name} — ${p.plan} ${p.rarity}`],
@@ -155,7 +156,7 @@ quickSearch.addEventListener("input", () => {
    ["CHARACTER","#characters",window.characterProfiles,p=>`${p.jp} — ${p.roman}`]
   ];
   let html="",remaining=12;
-  groups.forEach(([label,href,data,format])=>{const found=data.filter(x=>Object.values(x).flat().join(" ").toLowerCase().includes(q)).slice(0,Math.min(3,remaining));if(found.length){html+=`<div class="quick-group">${label}</div>`+found.map(x=>`<a class="quick-result" href="${href}">${format(x)}</a>`).join("");remaining-=found.length}});
+  groups.forEach(([label,href,data,format])=>{const found=data.filter(x=>window.GakumasSearch.matches(x,q)).slice(0,Math.min(3,remaining));if(found.length){html+=`<div class="quick-group">${label}</div>`+found.map(x=>`<a class="quick-result" href="${href}">${format(x)}</a>`).join("");remaining-=found.length}});
   const wordMatches=words.filter(x=>x.join(" ").toLowerCase().includes(q)).slice(0,Math.min(3,remaining));if(wordMatches.length)html+='<div class="quick-group">GLOSSARY</div>'+wordMatches.map(x=>`<a class="quick-result" href="#glossary">${x[0]} — ${x[1]}</a>`).join("");
   quickResults.innerHTML=html||'<p class="search-hint">ไม่พบข้อมูล ลองใช้ชื่อญี่ปุ่นหรือคำที่สั้นลง</p>';
   quickResults.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>dialog.close()));
@@ -164,6 +165,9 @@ document.addEventListener("keydown", e => { if(e.key === "Escape" && document.ac
 
 const toast = document.querySelector("#toast"); let toastTimer;
 document.querySelectorAll("[data-toast]").forEach(btn=>btn.addEventListener("click",()=>{toast.textContent=btn.dataset.toast;toast.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove("show"),2600);}));
+
+function updateEvents(){const now=Date.now();document.querySelectorAll("[data-event-end]").forEach(card=>{const end=new Date(card.dataset.eventEnd).getTime(),left=end-now;if(left<=0){card.hidden=true;return}const days=Math.floor(left/86400000),hours=Math.floor(left%86400000/3600000);let status=card.querySelector(".event-status");if(!status){status=document.createElement("div");status.className="event-status";card.append(status)}status.textContent=`${left<86400000?"ใกล้หมด":"กำลังจัด"} · เหลือ ${days?`${days} วัน `:""}${hours} ชั่วโมง · เวลาไทย`;if(!card.querySelector(".event-source")){const link=document.createElement("a");link.className="event-source";link.href=card.dataset.eventSource;link.target="_blank";link.rel="noreferrer";link.textContent="รายละเอียดและแหล่งข้อมูล ↗";card.append(link)}})}
+updateEvents();setInterval(updateEvents,60000);
 
 renderWords();
 renderCharacters();

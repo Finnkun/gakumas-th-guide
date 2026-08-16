@@ -1,0 +1,1 @@
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/804180":{"title":"【GakuM@S】เงื่อนไขการปลดล็อกและเอฟเฟกต์ของผลึกครั้งแรก 【Gakuen Idol Master】","updated":"","sections":[],"originalTitle":"【学マス】初めての結晶の解放条件と効果【学園アイドルマスター】","originalSections":[]}};
