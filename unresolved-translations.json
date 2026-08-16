@@ -1,6 +1,6 @@
 {
   "generated": "2026-08-16",
-  "count": 498,
+  "count": 483,
   "items": [
     {
       "type": "skills",
@@ -18,33 +18,6 @@
       "sourceText": "いずれかの指針の場合、使用可 強気に変更 パラメータ+7 ［成長］指針を変更するたび、このスキルカードのパラメータ値増加+15（レッスン中4回） 強化後 いずれかの指針の場合、使用可 強気に変更 パラメータ+10 ［成長］指針を変更するたび、自身のパラメータ値増加+20（4回まで）",
       "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654075/",
       "sourceUrl": "https://game8.jp/gakuen-idolmaster/654075",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654069",
-      "name": "頂点へ",
-      "sourceText": "以降、ターン開始時、いずれかの指針の場合、全てのスキルカードのパラメータ値増加+4 強化後 全てのスキルカードのパラメータ値増加+6 以降、ターン開始時、いずれかの指針の場合、全てのスキルカードのパラメータ値増加+4",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654069/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654069",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "663107",
-      "name": "新たなステージ",
-      "sourceText": "山札か捨て札にあるスキルカードを選択し、保留に移動 全力値+1 スキルカード使用数追加+1 強化後 山札か捨て札にあるスキルカードを選択し、保留に移動 全力値+2 スキルカード使用数追加+1 保留にあるスキルカードのパラメータ値増加+5",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/663107/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/663107",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "667277",
-      "name": "受け取ってくれる？",
-      "sourceText": "温存に変更 以降、強気効果のスキルカード使用後、強気効果のスキルカードのパラメータ増加値+2 強化後 温存に変更 以降、強気効果のスキルカード使用後、強気効果のスキルカードのパラメータ増加値+3",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/667277/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/667277",
       "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
     },
     {
@@ -76,42 +49,6 @@
     },
     {
       "type": "skills",
-      "id": "skill-28",
-      "name": "頬張る3色",
-      "sourceText": "強気に変更 全力値+5 全力効果のアクティブスキルカードのパラメータ値増加+2 次のターン、温存に変更 強化後 強気に変更 全力値+5 全力効果のアクティブスキルカードのパラメータ値増加+4 次のターン、温存に変更",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/skill-28/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/609737",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "skill-29",
-      "name": "あの日、この場所で",
-      "sourceText": "体力消費6 全力値+10 山札か捨札にあるスキルカードを2枚選択し、保留に移動 強化後 体力消費4 全力値+10 山札か捨札にあるスキルカードを2枚選択し、保留に移動",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/skill-29/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/609737",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "skill-30",
-      "name": "対戦お願いします！",
-      "sourceText": "山札か捨札にあるスキルカードを選択し、保留に移動 スキルカードを引く スキルカード使用数追加+1 強化後 元気消費0 山札か捨札にあるスキルカードを選択し、保留に移動 スキルカードを引く スキルカード使用数追加+1",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/skill-30/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/609737",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "skill-31",
-      "name": "あたらしい光",
-      "sourceText": "温存2段階目に変更 熱意追加+5 強化後 温存2段階目に変更 熱意追加+8",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/skill-31/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/609737",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
       "id": "skill-32",
       "name": "屋上からの景色",
       "sourceText": "レッスン開始時手札に入る 全力値+2 全力効果のスキルカードのパラメータ値増加+4 以降、ターン開始時、温存の場合、のんびりに変更 強化後 レッスン開始時手札に入る 全力値+3 全力効果のスキルカードのパラメータ値増加+9 以降、ターン開始時、温存の場合、のんびりに変更",
@@ -126,33 +63,6 @@
       "sourceText": "レッスン開始時手札に入る 温存に変更 以降、ターン開始時、温存の場合、のんびりに変更 強化後 レッスン開始時手札に入る",
       "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/skill-33/",
       "sourceUrl": "https://game8.jp/gakuen-idolmaster/609737",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654101",
-      "name": "スパート",
-      "sourceText": "全力値+1 温存の場合、自身を保留に移動 全力の場合、パラメータ+25 強化後 全力値+1 温存の場合、自身を保留に移動 全力の場合、パラメータ+25",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654101/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654101",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654094",
-      "name": "積み重ね",
-      "sourceText": "全力値+2 温存の場合、自身を保留に移動 全力の場合、パラメータ+20 強化後 全力値+2 温存の場合、自身を保留に移動 全力の場合、パラメータ+35",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654094/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654094",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654091",
-      "name": "嬉しい誤算",
-      "sourceText": "元気+5 全力値+2 全力値が1以上の場合、温存に変更 強化後 元気+6 全力値+3 全力値が1以上の場合、温存に変更",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654091/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654091",
       "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
     },
     {
@@ -238,42 +148,6 @@
     },
     {
       "type": "skills",
-      "id": "692629",
-      "name": "モチベ",
-      "sourceText": "全力値+2 以降、全力効果のスキルカード使用時、全力値+1 強化後 全力値+2 以降、全力効果のスキルカード使用時、全力値+1",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/692629/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/692629",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "692628",
-      "name": "第一印象",
-      "sourceText": "強気に変更 以降、強気効果のスキルカード使用時、すべてのスキルカードのパラメータ値増加+2 強化後 強気に変更 以降、強気効果のスキルカード使用時、すべてのスキルカードのパラメータ値増加+3",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/692628/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/692628",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "692627",
-      "name": "盛り上げ上手",
-      "sourceText": "アクティブスキルカードのパラメータ値増加+13・コスト値増加+1 次のターン、スキルカードを引く 強化後 アクティブスキルカードのパラメータ値増加+16・コスト値増加+1 次のターン、スキルカードを2枚引く",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/692627/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/692627",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "692626",
-      "name": "インフルエンサー",
-      "sourceText": "メンタルスキルカードの元気値増加+5・コスト値増加+1 スキルカード使用数追加+1 スキルカードを引く 強化後 メンタルスキルカードの元気値増加+6・コスト値増加+1 スキルカード使用数追加+1 スキルカードを引く",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/692626/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/692626",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
       "id": "692625",
       "name": "トレンドリーダー",
       "sourceText": "自身を保留に移動 非全力状態の場合、スキルカード使用数追加+1 全力の場合、パラメータ+3 (このレッスン中に増加した全力値の50%分、パラメータ上昇量増加・2回) 成長：自身使用後、全力の場合、このスキルカードのパラメータ値増加+5・全力値コスト値増加+1 強化後 自身を保留に移動 非全力状態の場合、スキルカード使用数追加+1 全力の場合、パラメータ+10 (累積全力値の100%分、パラメータ上昇量増加・2回) 成長：自身使用後、全力の場合、自身のパラメータ値増加+5・全力値コスト値増加+1(4回まで)",
@@ -288,15 +162,6 @@
       "sourceText": "強気の場合、使用可 温存に変更 強気効果のスキルカードのパラメータ値増加+37・コスト値増加+7 強化後 強気の場合、使用可 温存に変更 強気効果のスキルカードのパラメータ値増加+45・コスト値増加+7",
       "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/692624/",
       "sourceUrl": "https://game8.jp/gakuen-idolmaster/692624",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "692623",
-      "name": "セッティング",
-      "sourceText": "全力値が5以上の場合、使用可 全力値+5 次のターン、手札のパラメータ値増加+8 強化後 全力値が5以上の場合、使用可 全力値+5 次のターン、手札のパラメータ値増加+8",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/692623/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/692623",
       "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
     },
     {
