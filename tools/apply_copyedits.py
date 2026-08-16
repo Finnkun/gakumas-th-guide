@@ -15,8 +15,8 @@ changes={
   ('เปิด issue ที่ GitHub Issues','เปิดรายงานปัญหาใน GitHub Issues'),
  ],
  'detail-app.js':[
-  ('escapeHtml(item.effect||item.note||"ตรวจรายละเอียดเพิ่มเติมจากหน้าต้นฉบับ")','escapeHtml(item.reviewStatus==="reviewed"?(item.effect||item.note):"ยังไม่มีคำแปลภาษาไทยที่ผ่านการตรวจ — โปรดดูต้นฉบับ Game8")'),
-  ('<p>${escapeHtml(item.reviewStatus==="reviewed"?(item.effect||item.note):"ยังไม่มีคำแปลภาษาไทยที่ผ่านการตรวจ — โปรดดูต้นฉบับ Game8")}</p>','<p${item.reviewStatus!=="reviewed"&&item.originalEffect?\' lang="ja"\':""}>${escapeHtml(item.reviewStatus==="reviewed"?(item.effect||item.note):(item.originalEffect||"ยังไม่มีคำแปลภาษาไทยที่ผ่านการตรวจ — โปรดดูต้นฉบับ Game8"))}</p>'),
+ ('escapeHtml(item.effect||item.note||"ตรวจรายละเอียดเพิ่มเติมจากหน้าต้นฉบับ")','escapeHtml(item.translationStatus==="reviewed"&&item.localizedEffect?item.localizedEffect:(item.originalEffect||"ยังไม่มีคำแปลภาษาไทยที่ผ่านการตรวจ — โปรดดูต้นฉบับ Game8"))'),
+ ('<p>${escapeHtml(item.reviewStatus==="reviewed"?(item.effect||item.note):"ยังไม่มีคำแปลภาษาไทยที่ผ่านการตรวจ — โปรดดูต้นฉบับ Game8")}</p>','<p${item.translationStatus!=="reviewed"&&item.originalEffect?\' lang="ja"\':""}>${escapeHtml(item.translationStatus==="reviewed"&&item.localizedEffect?item.localizedEffect:(item.originalEffect||"ยังไม่มีคำแปลภาษาไทยที่ผ่านการตรวจ — โปรดดูต้นฉบับ Game8"))}</p>'),
   ('$("#detailTitle").textContent=item.short||item.name;','$("#detailTitle").textContent=item.short||item.name;$("#detailTitle").lang="ja";'),
  ],
  'catalog-app.js':[
@@ -26,6 +26,14 @@ changes={
 }
 for filename,pairs in changes.items():
     path=ROOT/filename;text=path.read_text(encoding='utf-8')
-    for old,new in pairs:text=text.replace(old,new)
+    for old,new in pairs:
+        if new not in text:text=text.replace(old,new)
+    if filename=='detail-app.js':
+        repeated='$("#detailTitle").lang="ja";$("#detailTitle").lang="ja";'
+        while repeated in text:text=text.replace(repeated,'$("#detailTitle").lang="ja";')
+        text=text.replace('item.reviewStatus!=="reviewed"&&item.originalEffect','item.translationStatus!=="reviewed"&&item.originalEffect')
+        text=text.replace('item.reviewStatus==="reviewed"?(item.effect||item.note):(item.originalEffect||"ยังไม่มีคำแปลภาษาไทยที่ผ่านการตรวจ — โปรดดูต้นฉบับ Game8")','item.translationStatus==="reviewed"&&item.localizedEffect?item.localizedEffect:(item.originalEffect||"ยังไม่มีคำแปลภาษาไทยที่ผ่านการตรวจ — โปรดดูต้นฉบับ Game8")')
+    if filename=='catalog-app.js':
+        text=text.replace('x.reviewStatus!=="reviewed"&&x.originalEffect','x.translationStatus!=="reviewed"&&x.originalEffect')
     path.write_text(text,encoding='utf-8')
 print('copyedits applied')

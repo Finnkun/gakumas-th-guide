@@ -29,7 +29,9 @@ for output_name, (filename, variable, limit) in sources.items():
     all_records = read_array(filename, variable)
     records = copy.deepcopy(all_records[:limit])
     for record in records:
-        if record.get("reviewStatus") != "reviewed":
+        if record.get("translationStatus") == "reviewed" and record.get("localizedEffect"):
+            record["effect"] = record["localizedEffect"]
+        elif record.get("reviewStatus") != "reviewed":
             if "effect" in record: record["effect"] = "อยู่ระหว่างตรวจคำแปลและข้อมูลเอฟเฟกต์"
             if "note" in record: record["note"] = "อยู่ระหว่างตรวจคำแปลและข้อมูลเอฟเฟกต์"
     parts.append(f"window.{output_name} = {json.dumps(records, ensure_ascii=False, separators=(',', ':'))};")

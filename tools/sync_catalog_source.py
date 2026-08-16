@@ -35,7 +35,9 @@ for kind,records in DETAIL_OVERRIDES.items():
             title=clean(heading.group(0))
             if title==f'{name}の効果':
                 end=next((candidate.start() for candidate in headings[index+1:] if candidate.group(0).lower().startswith('<h2')),len(document))
-                effect=clean(document[heading.end():end]);break
+                effect=clean(document[heading.end():end])
+                effect=effect.replace(f'{name}の効果','ก่อนอัปเกรด:').replace(f'{name}+の効果','หลังอัปเกรด:')
+                break
         if effect:existing[name]={'name':name,'effect':effect,'unlock':'','source':url}
         time.sleep(.5)
     payload['categories'][kind]=list(existing.values())
