@@ -35,5 +35,8 @@ for filename,pairs in changes.items():
         text=text.replace('item.reviewStatus==="reviewed"?(item.effect||item.note):(item.originalEffect||"ยังไม่มีคำแปลภาษาไทยที่ผ่านการตรวจ — โปรดดูต้นฉบับ Game8")','item.translationStatus==="reviewed"&&item.localizedEffect?item.localizedEffect:(item.originalEffect||"ยังไม่มีคำแปลภาษาไทยที่ผ่านการตรวจ — โปรดดูต้นฉบับ Game8")')
     if filename=='catalog-app.js':
         text=text.replace('x.reviewStatus!=="reviewed"&&x.originalEffect','x.translationStatus!=="reviewed"&&x.originalEffect')
+        text=text.replace('href="detail.html?type=${type}&id=${encodeURIComponent(x.id)}"','href="database/${type}/${encodeURIComponent(x.id)}/"')
+    if filename=='detail-app.js':
+        text=text.replace('href="detail.html?type=${type}&id=${encodeURIComponent(x.id)}"','href="database/${type}/${encodeURIComponent(x.id)}/"')
     path.write_text(text,encoding='utf-8')
 print('copyedits applied')

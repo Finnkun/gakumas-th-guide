@@ -7,6 +7,10 @@
   const requested = script?.dataset.type || document.body.dataset.type || new URLSearchParams(location.search).get("type") || "pidols";
   const type = ["pidols", "supports", "skills", "items", "drinks"].includes(requested) ? requested : "pidols";
   const requestedId = document.body.dataset.id || new URLSearchParams(location.search).get("id");
+  if (page === "detail" && /\/detail\.html$/.test(location.pathname) && requestedId) {
+    location.replace(`${rootUrl}database/${type}/${encodeURIComponent(requestedId)}/`);
+    return;
+  }
   const source = type === "pidols" ? "pidols.js" : type === "supports" ? "supportcards.js" : type === "skills" ? "skillcards.js" : "itemdata.js";
   const files = [source, "catalog-assets.js", "search-utils.js"];
   if (page === "detail") files.push(requestedId ? `detail-data/${type}/${encodeURIComponent(requestedId)}.js` : "deep-details.js", "detail-app.js", "detail-route-fix.js");

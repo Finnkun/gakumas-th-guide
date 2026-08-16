@@ -69,7 +69,7 @@ function tierClass(t){return t==="SS"?"ss":t==="S"?"s":t==="A"?"a":t==="B"?"b":t
 function renderPidols(){
  const q=(pidolSearch?.value||"").trim().toLowerCase(),plan=pidolPlan?.value||"all",tier=pidolTier?.value||"all";
  const list=window.pidols.filter(p=>(plan==="all"||p.plan===plan)&&(tier==="all"||p.tier===tier)&&Object.values(p).join(" ").toLowerCase().includes(q));
- pidolRows.innerHTML=list.map(p=>`<tr><td><a class="data-detail-link" href="detail.html?type=pidols&id=${encodeURIComponent(p.id)}"><b>${p.short}</b></a><small>${p.name}<br>${p.idol}</small><em>${p.note}</em></td><td><span class="tier-pill ${tierClass(p.tier)}">${p.tier}</span></td><td><span class="plan-pill ${p.plan.toLowerCase()}">${p.plan}</span><small>${p.style}</small></td><td>${p.rarity}</td><td>${p.obtain}</td></tr>`).join("");
+ pidolRows.innerHTML=list.map(p=>`<tr><td><a class="data-detail-link" href="database/pidols/${encodeURIComponent(p.id)}/"><b>${p.short}</b></a><small>${p.name}<br>${p.idol}</small><em>${p.note}</em></td><td><span class="tier-pill ${tierClass(p.tier)}">${p.tier}</span></td><td><span class="plan-pill ${p.plan.toLowerCase()}">${p.plan}</span><small>${p.style}</small></td><td>${p.rarity}</td><td>${p.obtain}</td></tr>`).join("");
  pidolCount.textContent=list.length;pidolEmpty.hidden=list.length>0;
 }
 [pidolSearch,pidolPlan,pidolTier].forEach(x=>x?.addEventListener("input",renderPidols));
@@ -79,7 +79,7 @@ const supportRows=document.querySelector("#supportRows"),supportSearch=document.
 function renderSupports(){
  const q=(supportSearch?.value||"").trim().toLowerCase(),plan=supportPlan?.value||"all",type=supportType?.value||"all",rarity=supportRarity?.value||"all",tier=supportTier?.value||"all";
  const list=window.supportCards.filter(c=>(plan==="all"||c.plan===plan)&&(type==="all"||c.type===type)&&(rarity==="all"||c.rarity===rarity)&&(tier==="all"||c.tier===tier)&&Object.values(c).join(" ").toLowerCase().includes(q));
- supportRows.innerHTML=list.map(c=>`<tr><td><a class="data-detail-link" href="detail.html?type=supports&id=${encodeURIComponent(c.id)}"><b>${c.name}</b></a></td><td><span class="tier-pill ${tierClass(c.tier)}">${c.tier}</span></td><td><span class="type-pill ${c.type.toLowerCase()}">${c.type}</span></td><td><span class="plan-pill ${c.plan.toLowerCase()}">${c.plan}</span></td><td>${c.obtain}</td></tr>`).join("");
+ supportRows.innerHTML=list.map(c=>`<tr><td><a class="data-detail-link" href="database/supports/${encodeURIComponent(c.id)}/"><b>${c.name}</b></a></td><td><span class="tier-pill ${tierClass(c.tier)}">${c.tier}</span></td><td><span class="type-pill ${c.type.toLowerCase()}">${c.type}</span></td><td><span class="plan-pill ${c.plan.toLowerCase()}">${c.plan}</span></td><td>${c.obtain}</td></tr>`).join("");
  supportCount.textContent=list.length;supportEmpty.hidden=list.length>0;
 }
 [supportSearch,supportPlan,supportType,supportRarity,supportTier].forEach(x=>x?.addEventListener("input",renderSupports));
@@ -89,7 +89,7 @@ const skillGrid=document.querySelector("#skillGrid"),skillSearch=document.queryS
 function renderSkills(){
  const q=(skillSearch?.value||"").trim().toLowerCase(),plan=skillPlan?.value||"all",rarity=skillRarity?.value||"all";
  const list=window.skillCards.filter(c=>(plan==="all"||c.plan===plan)&&(rarity==="all"||c.rarity===rarity)&&Object.values(c).join(" ").toLowerCase().includes(q));
- skillGrid.innerHTML=list.map(c=>`<article class="skill-card"><div><span class="plan-pill ${c.plan.toLowerCase()}">${c.plan}</span><span class="rarity-label">${c.rarity}</span></div><h3><a class="data-detail-link dark-link" href="detail.html?type=skills&id=${encodeURIComponent(c.id)}">${c.name}</a></h3><p>${c.effect}</p></article>`).join("");
+ skillGrid.innerHTML=list.map(c=>`<article class="skill-card"><div><span class="plan-pill ${c.plan.toLowerCase()}">${c.plan}</span><span class="rarity-label">${c.rarity}</span></div><h3><a class="data-detail-link dark-link" href="database/skills/${encodeURIComponent(c.id)}/">${c.name}</a></h3><p>${c.effect}</p></article>`).join("");
  skillCount.textContent=list.length;skillEmpty.hidden=list.length>0;
 }
 [skillSearch,skillPlan,skillRarity].forEach(x=>x?.addEventListener("input",renderSkills));
@@ -99,7 +99,7 @@ const itemGrid=document.querySelector("#itemGrid"),itemSearch=document.querySele
 function renderItems(){
  const data=itemKind==="item"?window.pItems:window.pDrinks,q=(itemSearch?.value||"").trim().toLowerCase(),plan=itemPlan?.value||"all";
  const list=data.filter(x=>(plan==="all"||x.plan===plan)&&Object.values(x).join(" ").toLowerCase().includes(q));
- itemGrid.innerHTML=list.map(x=>`<article class="item-card"><div><span class="plan-pill ${x.plan.toLowerCase()}">${x.plan}</span>${x.unlock?`<span class="unlock-label">PLv ${x.unlock}</span>`:""}</div><h3><a class="data-detail-link dark-link" href="detail.html?type=${itemKind==="item"?"items":"drinks"}&id=${encodeURIComponent(x.id)}">${x.name}</a></h3><p>${x.effect}</p></article>`).join("");
+ itemGrid.innerHTML=list.map(x=>`<article class="item-card"><div><span class="plan-pill ${x.plan.toLowerCase()}">${x.plan}</span>${x.unlock?`<span class="unlock-label">PLv ${x.unlock}</span>`:""}</div><h3><a class="data-detail-link dark-link" href="database/${itemKind==="item"?"items":"drinks"}/${encodeURIComponent(x.id)}/">${x.name}</a></h3><p>${x.effect}</p></article>`).join("");
  itemCount.textContent=list.length;itemEmpty.hidden=list.length>0;document.querySelector("#itemTotal").textContent=window.pItems.length;document.querySelector("#drinkTotal").textContent=window.pDrinks.length;
  itemSource.innerHTML=itemKind==="item"?'Original guide/content: <a href="https://game8.jp/gakuen-idolmaster/610077" target="_blank" rel="noreferrer">Game8 — Pアイテム一覧 ↗</a>':'Original guide/content: <a href="https://game8.jp/gakuen-idolmaster/611910" target="_blank" rel="noreferrer">Game8 — Pドリンク一覧 ↗</a>';
 }
