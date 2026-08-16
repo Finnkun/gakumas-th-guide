@@ -16,6 +16,10 @@ for filename,variable,default_source in SETS:
         if not row.get('source'):row['source']=default_source
         if row.get('obtain') in ACQUISITION:row['obtain']=ACQUISITION[row['obtain']]
         if variable=='pidols':
+            style_labels={'センス':'Sense','ロジック':'Logic','アノマリー':'Anomaly','絶好調':'絶好調 (ฟอร์มยอดเยี่ยม)'}
+            note_labels={'センス':'P Idol สาย Sense','ロジック':'P Idol สาย Logic','アノマリー':'P Idol สาย Anomaly','Excellent Condition':'เน้นกลไก 絶好調 (ฟอร์มยอดเยี่ยม)'}
+            row['style']=style_labels.get(row.get('style'),row.get('style'))
+            row['note']=note_labels.get(row.get('note'),row.get('note'))
             found=[(jp,names) for jp,names in NAMES.items() if jp in row.get('name','')]
             if len(found)==1:
                 jp,names=found[0];romaji,thai=names['romaji'],names['thai']
