@@ -11,7 +11,7 @@ window.GakumasSearch = (() => {
     "姫崎莉波": ["Himesaki Rinami", "ฮิเมซากิ รินามิ", "รินามิ"],
     "花海佑芽": ["Hanami Ume", "ฮานามิ อุเมะ", "อุเมะ"],
     "十王星南": ["Juo Sena", "จูโอ เซนะ", "เซนะ"],
-    "秦谷美鈴": ["Hataya Misuzu", "ฮาตายะ มิสึสึ", "มิสึสึ", "มิซึสึ", "มิสุสุ", "Misuzu"],
+    "秦谷美鈴": ["美鈴", "Hataya Misuzu", "ฮาตายะ มิสึสึ", "มิสึสึ", "มิซึสึ", "มิสุสุ", "Misuzu"],
     "雨夜燕": ["Amaya Tsubame", "อามายะ สึบาเมะ", "สึบาเมะ"]
   };
   const normalize = value => String(value ?? "").normalize("NFKC").toLowerCase()
