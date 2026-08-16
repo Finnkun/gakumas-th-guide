@@ -1,6 +1,6 @@
 {
   "generated": "2026-08-16",
-  "count": 519,
+  "count": 498,
   "items": [
     {
       "type": "skills",
@@ -22,74 +22,11 @@
     },
     {
       "type": "skills",
-      "id": "654074",
-      "name": "心・技・体",
-      "sourceText": "強気2段階目に変更 パラメータ+7 全力値+3 消費体力減少2ターン 強化後 強気2段階目に変更 パラメータ+16 全力値+4 消費体力減少4ターン",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654074/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654074",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654073",
-      "name": "輝け！",
-      "sourceText": "全力値+3 次のターン、温存に変更 全力の場合、パラメータ+20（2回） 強化後 全力値+4 次のターン、温存2段階目に変更 全力の場合、パラメータ+25（2回）",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654073/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654073",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654072",
-      "name": "クライマックス",
-      "sourceText": "強気に変更 パラメータ+14（2回） 次のターン、温存に変更 強化後 強気2段階目に変更 パラメータ+19（2回） 次のターン、温存2段階目に変更",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654072/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654072",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654071",
-      "name": "全身全霊",
-      "sourceText": "強気に変更 次に使用したスキルカードの消費体力を0にする（2回） スキルカード使用数追加+1 スキルカードを3枚引く 強化後 強気に変更 次に使用したスキルカードの消費体力を0にする（2回） スキルカード使用数追加+2 スキルカードを3枚引く",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654071/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654071",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654070",
-      "name": "アイドルになります",
-      "sourceText": "全力値消費3 スキルカード使用数追加+1 手札のパラメータ上昇回数増加+1 強化後 全力値消費3 元気+4 温存に変更 スキルカード使用数追加+1 手札のパラメータ上昇回数増加+1",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654070/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654070",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
       "id": "654069",
       "name": "頂点へ",
       "sourceText": "以降、ターン開始時、いずれかの指針の場合、全てのスキルカードのパラメータ値増加+4 強化後 全てのスキルカードのパラメータ値増加+6 以降、ターン開始時、いずれかの指針の場合、全てのスキルカードのパラメータ値増加+4",
       "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654069/",
       "sourceUrl": "https://game8.jp/gakuen-idolmaster/654069",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654068",
-      "name": "覚悟",
-      "sourceText": "体力消費4 元気+8 全力値+5 山札か捨札にあるスキルカードを選択し、保留に移動 強化後 体力消費3 元気+8 全力値+7 山札か捨札にあるスキルカードを選択し、保留に移動",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654068/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654068",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "659082",
-      "name": "踏切の先に",
-      "sourceText": "全力の場合使用可 パラメータ+10（3回） 次のターン、温存2段階目に変更 強化後 全力の場合使用可 パラメータ+16（3回） 次のターン、温存2段階目に変更",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/659082/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/659082",
       "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
     },
     {
@@ -121,24 +58,6 @@
     },
     {
       "type": "skills",
-      "id": "654087",
-      "name": "はじけるパッション",
-      "sourceText": "いずれかの指針の場合、使用可 パラメータ+8（2回） 強化後 いずれかの指針の場合、使用可 パラメータ+10（2回）",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654087/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654087",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654084",
-      "name": "始まりの笑顔",
-      "sourceText": "全力値消費2 強気に変更 パラメータ+6 消費体力減少2ターン 次のターン、スキルカードを引く 強化後 全力値消費1 強気に変更 パラメータ+8 消費体力減少2ターン 次のターン、スキルカードを引く",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654084/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654084",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
       "id": "654083",
       "name": "理想のテンポ",
       "sourceText": "パラメータ+6（2回） 非温存状態の場合、スキルカード使用数追加+1、［成長］直接効果で指針を変更するたび、このスキルカードのパラメータ値増加+5 強化後 パラメータ+6（2回） 非温存状態の場合、スキルカード使用数追加+1、［成長］直接効果で指針を変更するたび、このスキルカードのパラメータ値増加+7",
@@ -153,33 +72,6 @@
       "sourceText": "全力値+3 パラメータ+28（累積全力値の100%分、パラメータ上昇量増加） 以降1回まで、全力を解除後、非全力状態の場合、温存2段階目に変更 強化後 全力値+3 パラメータ+28（累積全力値の200%分、パラメータ上昇量増加） 以降1回まで、全力を解除後、非全力状態の場合、温存2段階目に変更",
       "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654082/",
       "sourceUrl": "https://game8.jp/gakuen-idolmaster/654082",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654081",
-      "name": "潜在能力",
-      "sourceText": "元気+10 全力値+3 手札を選択し、保留に移動 強化後 元気+15 全力値+4 手札を選択し、保留に移動",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654081/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654081",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654078",
-      "name": "忍耐力",
-      "sourceText": "温存に変更 元気+5 全力値+2 強化後 温存2段階目に変更 元気+5 全力値+3",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654078/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654078",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654077",
-      "name": "切磋琢磨",
-      "sourceText": "全力値+2 山札か捨札にあるスキルカードを選択し、保留に移動 スキルカード使用数追加+1 指針固定+1ターン 強化後 全力値+3 山札か捨札にあるスキルカードを選択し、保留に移動 スキルカード使用数追加+1 指針固定+1ターン",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654077/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654077",
       "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
     },
     {
@@ -4590,87 +4482,6 @@
       "sourceText": "スキルカード獲得時、スター性+10(プロデュース中20回)",
       "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/items/item-217/",
       "sourceUrl": "https://game8.jp/gakuen-idolmaster/610077",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "drinks",
-      "id": "654112",
-      "name": "ほっと緑茶",
-      "sourceText": "山札か捨札にあるスキルカードを選択し、保留へ移動 温存2段階目に変更",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/drinks/654112/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654112",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "drinks",
-      "id": "654110",
-      "name": "初星スーパーソーダ",
-      "sourceText": "強気2段階目に変更 消費体力減少1ターン",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/drinks/654110/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654110",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "drinks",
-      "id": "654108",
-      "name": "初星湯",
-      "sourceText": "ターン追加+1 体力消費2 消費体力増加1ターン",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/drinks/654108/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654108",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "drinks",
-      "id": "611950",
-      "name": "おしゃれハーブティー",
-      "sourceText": "好印象の100％分パラメータ上昇 元気＋3",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/drinks/611950/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/611950",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "drinks",
-      "id": "784688",
-      "name": "初星黒酢",
-      "sourceText": "山札か捨て札にあるスキルカードを選択し、手札に移動、次に使用したスキルカードの消費体力を0にする（2回）体力消費2、消費体力増加1ターン",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/drinks/784688/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/784688",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "drinks",
-      "id": "611946",
-      "name": "ミックススムージー",
-      "sourceText": "手札をすべて入れ替える 体力回復2",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/drinks/611946/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/611946",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "drinks",
-      "id": "654113",
-      "name": "パワフル漢方ドリンク",
-      "sourceText": "山札か捨札にあるアイドル固有スキルカード1枚を手札に移動 消費体力減少3ターン",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/drinks/654113/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654113",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "drinks",
-      "id": "784689",
-      "name": "センブリソーダ",
-      "sourceText": "パラメータ上昇量増加10%（5ターン）スキルカードを2枚引く、体力消費2、以降の5ターンの間、ターン開始後、スキルカードを引く",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/drinks/784689/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/784689",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "drinks",
-      "id": "611952",
-      "name": "初星スペシャル青汁",
-      "sourceText": "ランダムな強化済みスキルカード（SSR）を手札に生成",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/drinks/611952/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/611952",
       "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
     }
   ]

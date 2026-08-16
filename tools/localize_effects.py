@@ -43,6 +43,7 @@ PHRASES=[
 ]
 LOCKS=[('全力値','全力値'),('絶好調','絶好調 (ฟอร์มยอดเยี่ยม)'),('好印象','好印象 (ความประทับใจ)'),('やる気','やる気 (แรงจูงใจ)'),('強気','強気 (รุกหนัก)'),('温存','温存 (เก็บแรง)'),('全力','全力 (ทุ่มสุดกำลัง)'),('好調','好調 (ฟอร์มดี)'),('集中','集中 (สมาธิ)'),('元気','Genki (元気)'),('熱意','熱意')]
 CANONICAL=json.loads((ROOT/'translation-glossary.json').read_text(encoding='utf-8'))
+MANUAL=json.loads((ROOT/'manual-effect-translations.json').read_text(encoding='utf-8'))
 LOCKS=[(source,CANONICAL.get(source,target)) for source,target in LOCKS]
 
 def localize(value):
@@ -71,7 +72,8 @@ for filename,variable in SETS:
     text=files.setdefault(filename,(ROOT/filename).read_text(encoding='utf-8'));match=re.search(rf'(window\.{variable}\s*=\s*)(\[.*?\])(\s*;)',text,re.S);rows=json.loads(match.group(2))
     for row in rows:
         if row.get('originalEffect'):
-            row['localizedEffect']=localize(row['originalEffect']);row['translationStatus']='reviewed' if is_complete(row['localizedEffect']) else 'draft';stats['localized']+=1;stats[row['translationStatus']]+=1
+            key=f'{"skills" if variable=="skillCards" else "items" if variable=="pItems" else "drinks"}:{row.get("id")}'
+            row['localizedEffect']=MANUAL.get(key) or localize(row['originalEffect']);row['translationStatus']='reviewed' if key in MANUAL or is_complete(row['localizedEffect']) else 'draft';stats['localized']+=1;stats[row['translationStatus']]+=1
         stats['total']+=1
     replacement=match.group(1)+json.dumps(rows,ensure_ascii=False,separators=(',',':'))+match.group(3);files[filename]=text[:match.start()]+replacement+text[match.end():]
 for filename,text in files.items():(ROOT/filename).write_text(text,encoding='utf-8')
