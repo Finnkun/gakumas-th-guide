@@ -1,88 +1,7 @@
 {
   "generated": "2026-08-16",
-  "count": 483,
+  "count": 465,
   "items": [
-    {
-      "type": "skills",
-      "id": "654076",
-      "name": "翔び立て！",
-      "sourceText": "全力値+3 パラメータ+10（このレッスン中に増加した全力値の100%分、パラメータ上昇量増加） ［成長］全力になった時、このスキルカードのパラメータ値増加+20（レッスン中1回） 強化後 全力値+4 パラメータ+10（累積全力値の150%分、パラメータ上昇量増加） ［成長］全力になった時、自身のパラメータ値増加+30（1回まで）",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654076/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654076",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654075",
-      "name": "総合芸術",
-      "sourceText": "いずれかの指針の場合、使用可 強気に変更 パラメータ+7 ［成長］指針を変更するたび、このスキルカードのパラメータ値増加+15（レッスン中4回） 強化後 いずれかの指針の場合、使用可 強気に変更 パラメータ+10 ［成長］指針を変更するたび、自身のパラメータ値増加+20（4回まで）",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654075/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654075",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "skill-14",
-      "name": "きらきらプリズム",
-      "sourceText": "温存の場合、使用可 強気2段階目に変更 以降、メンタルスキルカード使用時、強気2段階目の場合、強気効果のスキルカードのパラメータ増加値+7 強化後 温存の場合、使用可 強気2段階目に変更 以降、メンタルスキルカード使用時、強気2段階目の場合、強気効果のスキルカードのパラメータ増加値+8",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/skill-14/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/609737",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654083",
-      "name": "理想のテンポ",
-      "sourceText": "パラメータ+6（2回） 非温存状態の場合、スキルカード使用数追加+1、［成長］直接効果で指針を変更するたび、このスキルカードのパラメータ値増加+5 強化後 パラメータ+6（2回） 非温存状態の場合、スキルカード使用数追加+1、［成長］直接効果で指針を変更するたび、このスキルカードのパラメータ値増加+7",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654083/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654083",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "654082",
-      "name": "トレーニングの成果",
-      "sourceText": "全力値+3 パラメータ+28（累積全力値の100%分、パラメータ上昇量増加） 以降1回まで、全力を解除後、非全力状態の場合、温存2段階目に変更 強化後 全力値+3 パラメータ+28（累積全力値の200%分、パラメータ上昇量増加） 以降1回まで、全力を解除後、非全力状態の場合、温存2段階目に変更",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/654082/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/654082",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "skill-32",
-      "name": "屋上からの景色",
-      "sourceText": "レッスン開始時手札に入る 全力値+2 全力効果のスキルカードのパラメータ値増加+4 以降、ターン開始時、温存の場合、のんびりに変更 強化後 レッスン開始時手札に入る 全力値+3 全力効果のスキルカードのパラメータ値増加+9 以降、ターン開始時、温存の場合、のんびりに変更",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/skill-32/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/609737",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "skill-33",
-      "name": "休み休み、前へ",
-      "sourceText": "レッスン開始時手札に入る 温存に変更 以降、ターン開始時、温存の場合、のんびりに変更 強化後 レッスン開始時手札に入る",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/skill-33/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/609737",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "skill-49",
-      "name": "おてつき注意！",
-      "sourceText": "レッスン開始時手札に入る 以降の5ターンの間、ターン開始時、非強気状態の場合、強気に変更 強化後 レッスン開始時手札に入る 以降の5ターンの間、ターン開始時、非強気状態の場合、強気に変更 スキルカード使用数追加+1",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/skill-49/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/609737",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "skill-51",
-      "name": "放課後おしゃべり",
-      "sourceText": "全力値+2 次のターン、パラメータ+8（このレッスン中に増加した全力値の300％分、パラメータ上昇量増加） 強化後 全力値+5 次のターン、パラメータ+8（累積全力値の300％分、パラメータ上昇量増加）",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/skill-51/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/609737",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
     {
       "type": "skills",
       "id": "654035",
@@ -112,33 +31,6 @@
     },
     {
       "type": "skills",
-      "id": "667278",
-      "name": "がんばった、よ",
-      "sourceText": "全力値+4 山札か捨札にあるスキルカードを選択し、保留に移動 以降、ターン開始時、全力の場合、すべてのスキルカードのパラメータ増加値+2 強化後 全力値+5 山札か捨札にあるスキルカードを選択し、保留に移動 以降、ターン開始時、全力の場合、すべてのスキルカードのパラメータ増加値+2",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/667278/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/667278",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "667279",
-      "name": "バレンタイン大作戦！",
-      "sourceText": "体力消費3 元気+4 温存に変更 以降の2ターンの、ターン開始時、温存に変更 強化後 体力消費2に変更 元気+8 温存に変更 以降の2ターンの、ターン開始時、温存に変更",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/667279/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/667279",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "667280",
-      "name": "愛情レインボー",
-      "sourceText": "温存の場合、使用可 全力値+2 体力回復2 山札にあるスキルカードを選択し、保留に移動 強化後 温存の場合、使用可 全力値+3 体力回復3 山札にあるスキルカードを選択し、保留に移動",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/667280/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/667280",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
       "id": "692631",
       "name": "タフネス",
       "sourceText": "温存になった回数が2回以上の場合、使用可 温存に変更 スキルカード使用回数追加+1 アクティブスキルカードのパラメータ値増加 コスト値増加+1 強化後 温存になった回数が2回以上の場合、使用可 温存に変更 スキルカード使用回数追加+1 アクティブスキルカードのパラメータ値増加 コスト値増加+1",
@@ -153,33 +45,6 @@
       "sourceText": "自身を保留に移動 非全力状態の場合、スキルカード使用数追加+1 全力の場合、パラメータ+3 (このレッスン中に増加した全力値の50%分、パラメータ上昇量増加・2回) 成長：自身使用後、全力の場合、このスキルカードのパラメータ値増加+5・全力値コスト値増加+1 強化後 自身を保留に移動 非全力状態の場合、スキルカード使用数追加+1 全力の場合、パラメータ+10 (累積全力値の100%分、パラメータ上昇量増加・2回) 成長：自身使用後、全力の場合、自身のパラメータ値増加+5・全力値コスト値増加+1(4回まで)",
       "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/692625/",
       "sourceUrl": "https://game8.jp/gakuen-idolmaster/692625",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "692624",
-      "name": "一心不乱",
-      "sourceText": "強気の場合、使用可 温存に変更 強気効果のスキルカードのパラメータ値増加+37・コスト値増加+7 強化後 強気の場合、使用可 温存に変更 強気効果のスキルカードのパラメータ値増加+45・コスト値増加+7",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/692624/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/692624",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "692622",
-      "name": "次こそは、必ず",
-      "sourceText": "体力消費6 レッスン開始時手札に入る 温存に変更 メンタルスキルカードの元気増加+8 強化後 体力消費6 レッスン開始時手札に入る 温存に変更 メンタルスキルカードの元気増加+11",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/692622/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/692622",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "708549",
-      "name": "待ち望んだ瞬間",
-      "sourceText": "温存2段階目に変更 以降、直接効果で全力値が増加後、温存の場合、全力値+1 強化後 コストが元気-1に軽減 温存2段階目に変更 以降、直接効果で全力値が増加後、温存の場合、全力値+1",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/708549/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/708549",
       "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
     },
     {
@@ -265,38 +130,11 @@
     },
     {
       "type": "skills",
-      "id": "712460",
-      "name": "巻き返し",
-      "sourceText": "温存に変更 熱意追加+3 全てのスキルカードのコスト値減少-1 強化後 温存に変更 熱意追加+6 全てのスキルカードのコスト値減少-1",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/712460/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/712460",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
       "id": "712457",
       "name": "達成感",
       "sourceText": "温存に変更 スキルカード使用数追加+1 以降3回まで、全力を解除後、非全力状態の場合、温存に変更 強化後 コストが元気-3に変更 温存に変更 スキルカード使用数追加+1 以降3回まで、全力を解除後、非全力状態の場合、温存に変更",
       "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/712457/",
       "sourceUrl": "https://game8.jp/gakuen-idolmaster/712457",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "713805",
-      "name": "のんびり屋さん",
-      "sourceText": "全力値+1 以降、ターン開始時、温存の場合、のんびりに変更 強化後 全力値+3 以降、ターン開始時、温存の場合、のんびりに変更",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/713805/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/713805",
-      "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
-    },
-    {
-      "type": "skills",
-      "id": "717583",
-      "name": "でこれーとまじっく",
-      "sourceText": "体力消費1 全力値+2 元気+6 累積全力値の100％分パラメータ上昇 強化後 体力消費1 全力値+2 元気+9 累積全力値の150％分パラメータ上昇",
-      "pageUrl": "https://finnkun.github.io/gakumas-th-guide/database/skills/717583/",
-      "sourceUrl": "https://game8.jp/gakuen-idolmaster/717583",
       "reason": "เอฟเฟกต์ยังมีโครงสร้างที่ต้องตรวจความหมายจากต้นฉบับ"
     },
     {
