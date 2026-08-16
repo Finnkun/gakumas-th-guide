@@ -80,6 +80,7 @@ def acquisition(text, row, kind):
     return None
 
 generated = 0
+partial_effect = 0
 for label, filename, variable, kind in SETS:
     for row in read_rows(filename, variable):
         url = row.get("source")
@@ -88,13 +89,7 @@ for label, filename, variable, kind in SETS:
         if not url or existing and not structured or row.get("translationStatus") != "reviewed" or not row.get("localizedEffect"):
             continue
         article = DEEP.get(url, {})
-        if not article.get("sections"):
-            continue
-        obtain = acquisition(source_text(article), row, label)
-        if not obtain:
-            if structured:
-                manual.pop(url, None)
-            continue
+        obtain = acquisition(source_text(article), row, label) if article.get("sections") else None
         facts = [["ประเภท", label], ["Plan", row.get("plan", "ไม่ระบุ")]]
         if row.get("rarity"):
             facts.append(["ความหายาก", row["rarity"]])
@@ -105,11 +100,15 @@ for label, filename, variable, kind in SETS:
             "updated": "16 สิงหาคม 2026",
             "sections": [
                 {"level": 2, "title": "ข้อมูลพื้นฐาน", "blocks": [{"type": "table", "rows": facts}]},
-                {"level": 2, "title": "วิธีได้รับ", "blocks": [{"type": "p", "text": obtain}]},
+                {"level": 2, "title": "วิธีได้รับ", "blocks": [{"type": "p", "text": obtain or "ยังไม่มีข้อมูลวิธีได้รับภาษาไทยที่ตรวจสอบแล้ว"}]},
                 {"level": 2, "title": "เอฟเฟกต์", "blocks": [{"type": "list", "ordered": False, "items": [line.strip() for line in row["localizedEffect"].splitlines() if line.strip()]}]},
             ],
         }
-        generated += 1
+        if obtain:
+            generated += 1
+        else:
+            manual[url]["reviewStatus"] = "partial"
+            partial_effect += 1
 
 partial = 0
 for label, filename, variable, kind in PARTIAL_SETS:
@@ -120,8 +119,6 @@ for label, filename, variable, kind in PARTIAL_SETS:
         if not url or existing and existing.get("reviewStatus") != "partial":
             continue
         article = DEEP.get(url, {})
-        if not article.get("sections"):
-            continue
         facts = [["ประเภท", label]]
         if label == "P Idol":
             facts.extend([
@@ -150,6 +147,24 @@ for label, filename, variable, kind in PARTIAL_SETS:
             ],
         }
         partial += 1
+
+# The normal effect for this card is embedded in an image on Game8. Only the
+# upgraded effect is available as selectable source text, so publish that exact
+# verified portion and keep the page explicitly partial.
+santa_url = "https://game8.jp/gakuen-idolmaster/746308"
+manual[santa_url] = {
+    "title": "いたずらサンタさん — Skill Card",
+    "updated": "16 สิงหาคม 2026",
+    "reviewStatus": "partial",
+    "sections": [
+        {"level": 2, "title": "ข้อมูลพื้นฐาน", "blocks": [{"type": "table", "rows": [["ประเภท", "Skill Card"], ["Plan", "Anomaly"], ["ความหายาก", "SSR"]]}]},
+        {"level": 2, "title": "วิธีได้รับ", "blocks": [{"type": "p", "text": "จัด Support Card いたずらサンタさん แล้วรับจากอีเวนต์แบบสุ่มระหว่าง Produce โดยอีเวนต์อาจไม่เกิดขึ้นในทุกรอบ"}]},
+        {"level": 2, "title": "เอฟเฟกต์", "blocks": [
+            {"type": "p", "text": "ก่อนอัปเกรด: ต้นฉบับแสดงเอฟเฟกต์เป็นภาพและยังไม่มีข้อความที่ตรวจสอบได้"},
+            {"type": "list", "ordered": False, "items": ["หลังอัปเกรด (+)", "เปลี่ยนเป็น 温存 ขั้น 2", "เพิ่มปริมาณ 熱意 ที่ได้รับ 50% เป็นเวลา 3 เทิร์น", "เพิ่มจำนวนครั้งที่ใช้การ์ดสกิล +1 เป็นเวลา 1 เทิร์น", "จำกัด: 1 ครั้งต่อ Lesson", "ไม่สามารถซ้อนทับได้"]},
+        ]},
+    ],
+}
 
 OUT.write_text(json.dumps(manual, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
@@ -180,5 +195,5 @@ for url, article in DEEP.items():
         "pageUrl": f"/database/{kind}/{row.get('id', '')}/" if kind != "unknown" else "",
         "reason": reason,
     })
-(ROOT / "unresolved-translations.json").write_text(json.dumps(unresolved, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-print({"generated": generated, "partial": partial, "total_articles_with_thai": len(manual), "unresolved": len(unresolved)})
+(ROOT / "unresolved-deep-translations.json").write_text(json.dumps({"generated": "2026-08-16", "count": len(unresolved), "items": unresolved}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+print({"generated": generated, "partial_effect": partial_effect, "partial_catalog": partial, "total_articles_with_thai": len(manual), "unresolved": len(unresolved)})
