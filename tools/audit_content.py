@@ -1,8 +1,9 @@
 """Fail when publishable records violate integrity and terminology rules."""
 import json,re,sys
 from pathlib import Path
-from content_rules import CHARACTERS,lint_text
+from content_rules import lint_text
 ROOT=Path(__file__).resolve().parents[1]
+CHARACTERS=json.loads((ROOT/'proper-names.json').read_text(encoding='utf-8'))
 SOURCES=[('pidols.js','pidols','P Idol'),('supportcards.js','supportCards','Support Card'),('skillcards.js','skillCards','Skill Card'),('itemdata.js','pItems','P Item'),('itemdata.js','pDrinks','P Drink')]
 def read_array(filename,variable):
     text=(ROOT/filename).read_text(encoding='utf-8');match=re.search(rf'window\.{variable}\s*=\s*(\[.*?\]);',text,re.S)

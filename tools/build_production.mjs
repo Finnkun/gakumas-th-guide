@@ -5,7 +5,12 @@ import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+execFileSync("python", [path.join(root,"tools","normalize_catalog.py")], {stdio:"inherit"});
+execFileSync("python", [path.join(root,"tools","localize_effects.py")], {stdio:"inherit"});
+execFileSync("python", [path.join(root,"tools","build_home_data.py")], {stdio:"inherit"});
+execFileSync("python", [path.join(root,"tools","apply_copyedits.py")], {stdio:"inherit"});
 execFileSync("python", [path.join(root,"tools","audit_content.py")], {stdio:"inherit"});
+execFileSync("python", [path.join(root,"tools","translation_gate.py")], {stdio:"inherit"});
 execFileSync("python", [path.join(root,"tools","build_detail_drafts.py")], {stdio:"inherit"});
 const context = { window: {} };
 vm.createContext(context);
@@ -16,7 +21,7 @@ vm.runInContext(fs.readFileSync(path.join(root, "deep-details.js"), "utf8"), con
 const base = "https://finnkun.github.io/gakumas-th-guide";
 const esc = value => String(value).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const typeLabels={pidols:"P Idol",supports:"Support Card",skills:"Skill Card",items:"P Item",drinks:"P Drink"};
-const metaDescription=(item,type)=>{const reviewedText=item.reviewStatus==="reviewed"?(item.effect||item.note||""):"";const raw=`${item.short||item.name} — ${typeLabels[type]} ${item.plan||""} ${item.rarity||item.tier||""}. ${reviewedText||"ข้อมูลรายการและแหล่งอ้างอิงจาก Game8; คำแปลเอฟเฟกต์อยู่ระหว่างตรวจ"}`.replace(/\s+/g," ").trim();if(raw.length<=155)return raw;const cut=raw.slice(0,152);return cut.slice(0,Math.max(cut.lastIndexOf(" "),110)).trim()+"…"};
+const metaDescription=(item,type)=>{const reviewedText=item.translationStatus==="reviewed"?item.localizedEffect||"":"";const summary=reviewedText.split(/\n|。/)[0];let raw=`${item.short||item.name} — ${typeLabels[type]} ${item.plan||""} ${item.rarity||item.tier||""}. ${summary||"ข้อมูลรายการ แหล่งอ้างอิง และต้นฉบับภาษาญี่ปุ่นจาก Game8; คำแปลอยู่ระหว่างตรวจสอบ"}`.replace(/\s+/g," ").trim();if(raw.length<100)raw+=` พร้อมข้อมูลประเภท วิธีได้รับ และลิงก์ต้นฉบับสำหรับตรวจสอบบน Game8`;if(raw.length<=155)return raw;const words=raw.split(" ");let out="";for(const word of words){if((out+" "+word).trim().length>152)break;out=(out+" "+word).trim()}return out+"…"};
 
 for (const [id, article] of Object.entries(articles)) {
   const dir = path.join(root, "guides", id);
@@ -58,4 +63,5 @@ const urls = ["/", "/rights.html", "/catalog.html?type=pidols", "/catalog.html?t
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(url => `<url><loc>${base}${url.replaceAll("&", "&amp;")}</loc><lastmod>2026-08-16</lastmod></url>`).join("")}</urlset>\n`;
 fs.writeFileSync(path.join(root, "sitemap.xml"), sitemap, "utf8");
 fs.writeFileSync(path.join(root, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${base}/sitemap.xml\n`, "utf8");
+execFileSync("python", [path.join(root,"tools","test_translation_consistency.py")], {stdio:"inherit"});
 console.log({ guides: Object.keys(articles).length, details: detailUrls.length, sitemapUrls: urls.length });

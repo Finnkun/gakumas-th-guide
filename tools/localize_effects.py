@@ -42,6 +42,8 @@ PHRASES=[
  ('上昇','เพิ่ม'),('増加','เพิ่ม'),('減少','ลด'),('選択し','เลือก'),('使用するごとに','ทุกครั้งที่ใช้'),
 ]
 LOCKS=[('全力値','全力値'),('絶好調','絶好調 (ฟอร์มยอดเยี่ยม)'),('好印象','好印象 (ความประทับใจ)'),('やる気','やる気 (แรงจูงใจ)'),('強気','強気 (รุกหนัก)'),('温存','温存 (เก็บแรง)'),('全力','全力 (ทุ่มสุดกำลัง)'),('好調','好調 (ฟอร์มดี)'),('集中','集中 (สมาธิ)'),('元気','Genki (元気)'),('熱意','熱意')]
+CANONICAL=json.loads((ROOT/'translation-glossary.json').read_text(encoding='utf-8'))
+LOCKS=[(source,CANONICAL.get(source,target)) for source,target in LOCKS]
 
 def localize(value):
     text=unicodedata.normalize('NFKC',value or '').replace('※','หมายเหตุ: ')

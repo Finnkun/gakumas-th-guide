@@ -1,9 +1,13 @@
 """Reviewed Thai copy changes that are awkward to patch in generated one-line HTML."""
 from pathlib import Path
+import re
 ROOT=Path(__file__).resolve().parents[1]
 changes={
  'catalog.html':[
   ('href="p0.css"></head>','href="p0.css"><link rel="stylesheet" href="content-status.css"></head>'),
+  ('ค้นหาชื่อญี่ปุ่น ไทย Romaji หรือเอฟเฟกต์...','ค้นหาชื่อญี่ปุ่น ชื่อไทย คำอ่านโรมาจิ หรือเอฟเฟกต์...'),
+  ('<option>Free</option>','<option value="Free">ไม่จำกัด Plan</option>'),
+  ('<label id="rarityField"><span>ระดับ</span>','<label id="rarityField"><span>ความหายาก</span>'),
  ],
  'detail.html':[
   ('href="p0.css"></head>','href="p0.css"><link rel="stylesheet" href="content-status.css"></head>'),
@@ -38,5 +42,6 @@ for filename,pairs in changes.items():
         text=text.replace('href="detail.html?type=${type}&id=${encodeURIComponent(x.id)}"','href="database/${type}/${encodeURIComponent(x.id)}/"')
     if filename=='detail-app.js':
         text=text.replace('href="detail.html?type=${type}&id=${encodeURIComponent(x.id)}"','href="database/${type}/${encodeURIComponent(x.id)}/"')
+        text=re.sub(r'<p\$\{item\.translationStatus!=="reviewed"&&item\.originalEffect\?\' lang="ja"\':""\}>\$\{escapeHtml\(item\.translationStatus==="reviewed"&&item\.localizedEffect\?item\.localizedEffect:\(item\.originalEffect\|\|"[^"]+"\)\)\}</p>','${renderEffect(item)}',text)
     path.write_text(text,encoding='utf-8')
 print('copyedits applied')
