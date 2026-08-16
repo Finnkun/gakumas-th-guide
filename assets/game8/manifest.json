@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "guide-home",
+    "file": "assets/game8/guide-home.png",
+    "source_page": "https://game8.jp/gakuen-idolmaster",
+    "source_image": "https://img.game8.jp/10039289/07cc51da9fac021beda275a3da6bbf7b.png/original"
+  },
+  {
+    "slug": "pidols",
+    "file": "assets/game8/pidols.jpg",
+    "source_page": "https://game8.jp/gakuen-idolmaster/609097",
+    "source_image": "https://img.game8.jp/12014752/1992bbb9345ccd01901c344e8e402bee/original"
+  },
+  {
+    "slug": "supports",
+    "file": "assets/game8/supports.png",
+    "source_page": "https://game8.jp/gakuen-idolmaster/609102",
+    "source_image": "https://img.game8.jp/10042432/26101f586022afdc569b4392da2fabb3.png/original"
+  },
+  {
+    "slug": "skills",
+    "file": "assets/game8/skills.jpg",
+    "source_page": "https://game8.jp/gakuen-idolmaster/609737",
+    "source_image": "https://img.game8.jp/12013326/756cb525c708131b24d3e41d1dbe92dd/original"
+  },
+  {
+    "slug": "pitems",
+    "file": "assets/game8/pitems.jpg",
+    "source_page": "https://game8.jp/gakuen-idolmaster/610077",
+    "source_image": "https://img.game8.jp/12013199/4984a344f77a36f58bf7d8824d301b0c/original"
+  },
+  {
+    "slug": "pdrinks",
+    "file": "assets/game8/pdrinks.jpg",
+    "source_page": "https://game8.jp/gakuen-idolmaster/611910",
+    "source_image": "https://img.game8.jp/12013201/b99206a70f0dc144266c5f77a0a968eb/original"
+  },
+  {
+    "slug": "hajime-legend",
+    "file": "assets/game8/hajime-legend.png",
+    "source_page": "https://game8.jp/gakuen-idolmaster/752651",
+    "source_image": "https://assets.game8.jp/assets/game8_ogp-846ace0d45c153c1174a8beac78a5378ddc11fe3e20f7e4d9b51559cfc4db94d.png"
+  },
+  {
+    "slug": "nia",
+    "file": "assets/game8/nia.jpg",
+    "source_page": "https://game8.jp/gakuen-idolmaster/661665",
+    "source_image": "https://img.game8.jp/12019877/c4a2c98863020f12dc47306ce1ef49ac/original"
+  },
+  {
+    "slug": "hif",
+    "file": "assets/game8/hif.png",
+    "source_page": "https://game8.jp/gakuen-idolmaster/783836",
+    "source_image": "https://assets.game8.jp/assets/game8_ogp-846ace0d45c153c1174a8beac78a5378ddc11fe3e20f7e4d9b51559cfc4db94d.png"
+  }
+]

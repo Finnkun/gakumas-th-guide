@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="คู่มือ Gakuen Idolmaster ภาษาไทยแบบอ่านง่าย" />
+  <meta name="theme-color" content="#17171b" />
+  <meta property="og:title" content="GAKUMAS TH — คู่มือโปรดิวเซอร์ภาษาไทย" />
+  <meta property="og:description" content="ฐานข้อมูลและคู่มือ Gakuen Idolmaster ภาษาไทยสำหรับ P Idol, Support, Skill, Item และ Scenario" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/game8/guide-home.png" />
+  <title>GAKUMAS TH — คู่มือโปรดิวเซอร์ภาษาไทย</title>
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" href="assets/app-icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="articles.css" />
+  <link rel="stylesheet" href="pidols.css" />
+  <link rel="stylesheet" href="supportcards.css" />
+  <link rel="stylesheet" href="skillcards.css" />
+  <link rel="stylesheet" href="cycle67.css" />
+  <link rel="stylesheet" href="cycle89.css" />
+  <link rel="stylesheet" href="detail-links.css" />
+  <style>.support-toolbar{grid-template-columns:1fr repeat(4,auto)}.footer-links{display:flex;flex-direction:column;gap:8px}.footer-links a{color:var(--lime);text-decoration:none;font-weight:700}</style>
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="GAKUMAS TH หน้าแรก">
+      <span class="brand-mark">G</span>
+      <span>GAKUMAS <b>TH</b></span>
+    </a>
+    <nav aria-label="เมนูหลัก">
+      <a href="#guides">คู่มือ</a>
+      <a href="catalog.html?type=pidols">P Idol</a>
+      <a href="catalog.html?type=supports">Support</a>
+      <a href="catalog.html?type=skills">Skill</a>
+      <a href="catalog.html?type=items">Item</a>
+      <a href="#glossary">คำศัพท์</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav">เมนู</button>
+    <button class="search-toggle" id="searchToggle" aria-label="เปิดการค้นหา">⌕ <span>ค้นหา</span></button>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="เมนูมือถือ"><a href="#guides">คู่มือ</a><a href="catalog.html?type=pidols">P Idol</a><a href="catalog.html?type=supports">Support</a><a href="catalog.html?type=skills">Skill</a><a href="catalog.html?type=items">P Item</a><a href="catalog.html?type=drinks">P Drink</a><a href="#scenarios">Scenario</a><a href="#glossary">คำศัพท์</a></nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> FAN GUIDE · ภาษาไทย</div>
+        <h1>โปรดิวซ์ให้<br><em>ดาวของคุณ</em><br>เปล่งประกาย</h1>
+        <p>คู่มือ <strong>学園アイドルマスター</strong> ฉบับภาษาไทย — อ่านระบบที่ซับซ้อนให้เข้าใจง่าย พร้อมชื่อญี่ปุ่นสำหรับค้นหาในเกม</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#start">เริ่มเล่นตรงนี้ <span>↗</span></a>
+          <a class="button ghost" href="#glossary">เปิดพจนานุกรม</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="star-card">
+          <span class="jp-label">初星学園</span>
+          <span class="big-star">✦</span>
+          <div class="card-copy"><small>PRODUCER NOTE</small><b>STEP<br>BY STEP</b></div>
+        </div>
+        <span class="float-note note-a">VOCAL<br><b>01</b></span>
+        <span class="float-note note-b">DANCE<br><b>02</b></span>
+        <span class="float-note note-c">VISUAL<br><b>03</b></span>
+      </div>
+      <div class="hero-index">001 <span></span> PRODUCE GUIDE</div>
+    </section>
+
+    <section class="ticker" aria-label="ประกาศ">
+      <div>อัปเดตล่าสุด <b>16.08.2026</b></div>
+      <div class="ticker-track"><span>H.I.F GUIDE</span><i>✦</i><span>BEGINNER ROADMAP</span><i>✦</i><span>THAI GLOSSARY</span><i>✦</i><span>EVENT TRACKER</span></div>
+    </section>
+
+    <section class="section updates" id="updates">
+      <div class="section-head">
+        <div><span class="section-no">01</span><h2>ตอนนี้มีอะไร</h2></div>
+        <p>ตารางสั้น ๆ สำหรับเช็กก่อนเข้าเกม<br><span>เวลาไทยช้ากว่าเวลาญี่ปุ่น 2 ชั่วโมง</span></p>
+      </div>
+      <div class="update-grid">
+        <article class="feature-card pink">
+          <span class="card-kicker">GACHA · ถึง 17 ส.ค.</span>
+          <h3>Semi Blue<br><span>กลับมาแล้ว</span></h3>
+          <p>ตู้รีรัน セミブルー และ STEP UP ร่วมกับ 冠菊</p>
+          <div class="card-meta"><span>復刻</span><span>P IDOL</span><span>SUPPORT</span></div>
+        </article>
+        <article class="feature-card lime">
+          <span class="card-kicker">MISSION · ถึง 4 ก.ย.</span>
+          <h3>STEP 3<br><span>Panel Mission</span></h3>
+          <p>เคลียร์ภารกิจบนแผง รับตั๋วการันตี SSR P Idol</p>
+          <div class="card-meta"><span>EVENT</span><span>SSR確定</span></div>
+        </article>
+        <article class="feature-card ink">
+          <span class="card-kicker">CAMPAIGN · ถึง 16 พ.ย.</span>
+          <h3>เพิ่มค่าความสนิท<br><span>親愛度 BOOST</span></h3>
+          <p>ปั้นไอดอลเป้าหมายและทำเงื่อนไขเพื่อรับค่าความสนิทเพิ่ม</p>
+          <div class="card-meta"><span>STEP 3</span><span>BOOST</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section start" id="start">
+      <div class="section-head light">
+        <div><span class="section-no">02</span><h2>เริ่มจากตรงไหนดี?</h2></div>
+        <p>เส้นทางสำหรับโปรดิวเซอร์มือใหม่<br>ทำตามลำดับนี้ได้เลย</p>
+      </div>
+      <div class="roadmap">
+        <button class="road-step active" data-detail="เลือก P Idol ที่ชอบก่อน ตัวเริ่มต้นทุกคนใช้เรียนระบบได้ ไม่จำเป็นต้องไล่ตาม Tier ตั้งแต่นาทีแรก"><b>01</b><span>เลือกไอดอล</span><small>Pアイドル</small></button>
+        <button class="road-step" data-detail="จัด Support Card ให้ตรงกับ Vo / Da / Vi ที่ต้องการปั้น และอ่านความเข้ากันได้กับ Sense, Logic หรือ Anomaly"><b>02</b><span>จัดซัพพอร์ต</span><small>サポカ編成</small></button>
+        <button class="road-step" data-detail="ระหว่าง Produce ให้เลือก SP Lesson เมื่อคุ้มค่า รักษาพลังงาน และเตรียมเด็คก่อนสอบกลางภาคกับปลายภาค"><b>03</b><span>เริ่มโปรดิวซ์</span><small>プロデュース</small></button>
+        <button class="road-step" data-detail="เรียนรู้เงื่อนไขชนะของสายตัวเอง: Sense ทำคะแนนก้อนใหญ่, Logic สะสมเอฟเฟกต์, Anomaly บริหารจังหวะและสภาวะ"><b>04</b><span>ผ่านการสอบ</span><small>最終試験</small></button>
+      </div>
+      <div class="road-detail" id="roadDetail">เลือก P Idol ที่ชอบก่อน ตัวเริ่มต้นทุกคนใช้เรียนระบบได้ ไม่จำเป็นต้องไล่ตาม Tier ตั้งแต่นาทีแรก</div>
+    </section>
+
+    <section class="section" id="guides">
+      <div class="section-head">
+        <div><span class="section-no">03</span><h2>คู่มือยอดนิยม</h2></div>
+        <p>เลือกตามสิ่งที่คุณกำลังติด<br><span>สรุปใหม่เป็นภาษาไทย</span></p>
+      </div>
+      <div class="guide-grid" id="guideGrid">
+        <article class="guide-card" data-search="HIF โบนัส S4 support memory">
+          <div class="guide-icon">H</div><span class="tag hot">HOT</span>
+          <h3>คู่มือ H.I.F</h3><p>โบนัส, P Item, Memory และแนวทางทำแรงก์ S4+</p>
+          <button class="read-more article-open" data-article="hif">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="beginner มือใหม่ เริ่มเล่น reroll">
+          <div class="guide-icon">B</div><span class="tag">BASIC</span>
+          <h3>มือใหม่เริ่มตรงนี้</h3><p>ลำดับปลดล็อก การใช้ทรัพยากร และสิ่งที่ไม่ควรพลาด</p>
+          <button class="read-more article-open" data-article="beginner">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="sense logic anomaly เซนส์ ลอจิก อโนมาลี">
+          <div class="guide-icon">3</div><span class="tag">SYSTEM</span>
+          <h3>3 สายเล่นต่างกันอย่างไร</h3><p>Sense, Logic และ Anomaly แบบเข้าใจใน 5 นาที</p>
+          <a class="read-more" href="#systems">อ่านคู่มือ <span>→</span></a>
+        </article>
+        <article class="guide-card" data-search="ศัพท์ japanese thai dictionary คำศัพท์ ญี่ปุ่น ไทย">
+          <div class="guide-icon">あ</div><span class="tag">TOOLS</span>
+          <h3>ศัพท์ญี่ปุ่นในเกม</h3><p>ค้นหาศัพท์จากภาษาญี่ปุ่น ภาษาไทย หรือคำอ่านอังกฤษ</p>
+          <a class="read-more" href="#glossary">เปิดพจนานุกรม <span>→</span></a>
+        </article>
+        <article class="guide-card" data-search="reroll รีโรล กาชา เริ่มบัญชี">
+          <div class="guide-icon">R</div><span class="tag">GACHA</span>
+          <h3>คู่มือรีโรล</h3><p>เป้าหมาย เวลาที่ใช้ และขั้นตอนเริ่มบัญชีใหม่แบบย่อ</p>
+          <button class="read-more article-open" data-article="reroll">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="tier character ตัวละคร strongest ranking">
+          <div class="guide-icon">S</div><span class="tag hot">14 AUG</span>
+          <h3>Tier ตัวละคร</h3><p>อ่านอันดับให้ถูกโหมด พร้อมเกณฑ์ประเมินและตัวเด่นล่าสุด</p>
+          <button class="read-more article-open" data-article="tier">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="support card tier ซัพพอร์ต การ์ด">
+          <div class="guide-icon">＋</div><span class="tag">SUPPORT</span>
+          <h3>เลือกการ์ดซัพพอร์ต</h3><p>ความสำคัญของ SP Lesson, โบนัสค่าสถานะ และความเข้ากับ H.I.F</p>
+          <button class="read-more article-open" data-article="support">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="sense センス สมาธิ ฟอร์มดี">
+          <div class="guide-icon">Se</div><span class="tag">PLAN</span>
+          <h3>วิธีเล่น Sense</h3><p>สะสม 集中 และ 好調 ก่อนปิดเกมด้วยคอมโบทำคะแนน</p>
+          <button class="read-more article-open" data-article="sense">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="logic ロジック ความประทับใจ แรงจูงใจ">
+          <div class="guide-icon">Lo</div><span class="tag">PLAN</span>
+          <h3>วิธีเล่น Logic</h3><p>เลือกระหว่างแกน 好印象 หรือ やる気 + 元気</p>
+          <button class="read-more article-open" data-article="logic">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="anomaly アノマリー 強気 温存 全力">
+          <div class="guide-icon">An</div><span class="tag">PLAN</span>
+          <h3>วิธีเล่น Anomaly</h3><p>สลับ 温存 กับ 強気 และเลือกจังหวะ 全力</p>
+          <button class="read-more article-open" data-article="anomaly">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="skill card p item drink สกิล ไอเทม เครื่องดื่ม">
+          <div class="guide-icon">DB</div><span class="tag">DATABASE</span>
+          <h3>การ์ดและไอเทม</h3><p>วิธีอ่าน Skill Card, P Item และ P Drink โดยไม่เลือกผิดสาย</p>
+          <button class="read-more article-open" data-article="database">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="初 produce โปรดิวซ์ scenario">
+          <div class="guide-icon">初</div><span class="tag">SCENARIO</span><h3>คู่มือ Produce「初」</h3><p>ตั้งเป้าค่าสถานะ วางเด็ค และบริหารพลังงานตั้งแต่ต้นรอบ</p>
+          <button class="read-more article-open" data-article="produce">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="pro difficulty ระดับโปร regular">
+          <div class="guide-icon">P</div><span class="tag">DIFFICULTY</span><h3>ผ่านระดับ Pro</h3><p>จัดลำดับ Lesson, 授業, 相談 และรักษาพลังงานให้พอ</p>
+          <button class="read-more article-open" data-article="pro">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="memory เมโมรี 厳選 farming">
+          <div class="guide-icon">M</div><span class="tag">BUILD</span><h3>สร้างและคัด Memory</h3><p>เลือกคีย์สกิล โบนัสค่าสถานะ และวิธีลดตัวเลือกสุ่ม</p>
+          <button class="read-more article-open" data-article="memory">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="親愛度 affection bond ความสนิท">
+          <div class="guide-icon">♥</div><span class="tag">PROGRESS</span><h3>ค่าความสนิท 1–37</h3><p>ช่วงที่ใช้เงื่อนไข ช่วงที่ใช้แต้ม และรางวัลสำคัญ</p>
+          <button class="read-more article-open" data-article="affection">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="A+ true end final exam 15500">
+          <div class="guide-icon">A+</div><span class="tag">GOAL</span><h3>ทำ A+ และ True End</h3><p>เป้าค่าสถานะประมาณ 3,000 และคะแนนสอบปลายภาค</p>
+          <button class="read-more article-open" data-article="aplus">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="NIA next idol audition scenario">
+          <div class="guide-icon">N</div><span class="tag">SCENARIO</span><h3>คู่มือ N.I.A</h3><p>การสอบ 3 รอบ, SP Lesson, 営業 และ 特別指導</p><button class="read-more article-open" data-article="nia">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="contest pvp memory คอนเทสต์">
+          <div class="guide-icon">C</div><span class="tag">PVP</span><h3>Contest</h3><p>จัดทีมจาก Memory อ่าน Stage Effect และวางแผนตามฤดูกาล</p><button class="read-more article-open" data-article="contest">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="gacha เพชร banner pity กาชา">
+          <div class="guide-icon">G</div><span class="tag">GACHA</span><h3>วางแผนกาชา</h3><p>เช็ก Limited, ระยะเวลา, P Idol/Support และงบก่อนกด</p><button class="read-more article-open" data-article="gacha">อ่านคู่มือ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="character directory profile ตัวละคร รายชื่อ">
+          <div class="guide-icon">13</div><span class="tag">DIRECTORY</span><h3>สารบัญตัวละคร</h3><p>ชื่อญี่ปุ่นและแนวทางเลือก P Idol แต่ละเวอร์ชัน</p><button class="read-more article-open" data-article="characters">เปิดสารบัญ <span>→</span></button>
+        </article>
+        <article class="guide-card" data-search="support directory rarity vo da vi plan">
+          <div class="guide-icon">S</div><span class="tag">DIRECTORY</span><h3>สารบัญซัพพอร์ต</h3><p>วิธีกรองตามระดับ ค่าสถานะ Plan และแหล่งที่มา</p><button class="read-more article-open" data-article="supportdb">เปิดสารบัญ <span>→</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section character-db" id="characters">
+      <div class="section-head">
+        <div><span class="section-no">04</span><h2>ทำความรู้จักไอดอล</h2></div>
+        <p>โปรไฟล์ภาษาไทย 13 คน<br><span>อัปเดตจาก Game8 · 14.08.2026</span></p>
+      </div>
+      <label class="big-search compact-search"><span>⌕</span><input id="characterSearch" type="search" placeholder="ค้นหาชื่อญี่ปุ่น โรมาจิ CV หรือบ้านเกิด..." /></label>
+      <div class="character-grid" id="characterGrid"></div>
+      <p class="empty-state" id="characterEmpty" hidden>ไม่พบไอดอลที่ค้นหา</p>
+      <div class="db-credit">Original guide/content: <a href="https://game8.jp/gakuen-idolmaster/609097" target="_blank" rel="noreferrer">Game8 — キャラ一覧とプロフィール ↗</a></div>
+    </section>
+
+    <section class="section pidol-db" id="pidols">
+      <div class="section-head light"><div><span class="section-no">05</span><h2>P Idol Database</h2></div><p>Cycle 3B · รายการ SSR ฉบับเต็ม<br><span>Tier อ้างอิง 14.08.2026</span></p></div>
+      <figure class="source-cover"><img src="assets/game8/pidols.jpg" alt="ภาพหน้าปกฐานข้อมูล P Idol จาก Game8" loading="lazy"><figcaption>Original guide/content: Game8</figcaption></figure>
+      <div class="db-toolbar"><label class="db-search"><span>⌕</span><input id="pidolSearch" type="search" placeholder="ค้นหาชื่อ การ์ด Plan หรือกลไก..." /></label><select id="pidolPlan"><option value="all">ทุก Plan</option><option>Sense</option><option>Logic</option><option>Anomaly</option></select><select id="pidolTier"><option value="all">ทุก Tier</option><option>SS</option><option>S</option><option>A</option><option>B</option><option>C</option><option>ยังไม่ประเมิน</option><option>ยังไม่ปลด H.I.F</option></select></div>
+      <div class="result-summary"><b id="pidolCount">0</b> รายการ <button id="pidolReset">ล้างตัวกรอง</button></div>
+      <div class="pidol-table-wrap"><table class="pidol-table"><thead><tr><th>P Idol</th><th>Tier</th><th>Plan / กลไก</th><th>ระดับ</th><th>วิธีได้รับ</th></tr></thead><tbody id="pidolRows"></tbody></table></div>
+      <p class="empty-state dark-empty" id="pidolEmpty" hidden>ไม่พบ P Idol ตามเงื่อนไขนี้</p><div class="db-credit dark-credit">Original guide/content: <a href="https://game8.jp/gakuen-idolmaster/609097" target="_blank" rel="noreferrer">Game8 — Pアイドル一覧 ↗</a></div><a class="catalog-cta" href="catalog.html?type=pidols">เปิดหน้ารวม P Idol ทั้งหมด →</a>
+    </section>
+
+    <section class="section pidol-db support-db" id="supports">
+      <div class="section-head light"><div><span class="section-no">06</span><h2>Support Card Database</h2></div><p>Cycle 4 · รายการครบทุกระดับ<br><span>อ้างอิง 14.08.2026</span></p></div>
+      <figure class="source-cover"><img src="assets/game8/supports.png" alt="ภาพหน้าปก Support Card จาก Game8" loading="lazy"><figcaption>Original guide/content: Game8</figcaption></figure>
+      <div class="db-toolbar support-toolbar"><label class="db-search"><span>⌕</span><input id="supportSearch" type="search" placeholder="ค้นหาชื่อ Plan ประเภท หรือแหล่งที่มา..." /></label><select id="supportPlan"><option value="all">ทุก Plan</option><option>Sense</option><option>Logic</option><option>Anomaly</option><option>Free</option></select><select id="supportType"><option value="all">ทุกประเภท</option><option>Vocal</option><option>Dance</option><option>Visual</option><option>Support</option></select><select id="supportRarity"><option value="all">ทุกระดับ</option><option>SSR</option><option>SR</option><option>R</option></select><select id="supportTier"><option value="all">ทุก Tier</option><option>SS</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></div>
+      <div class="result-summary"><b id="supportCount">0</b> รายการ <button id="supportReset">ล้างตัวกรอง</button></div>
+      <div class="pidol-table-wrap"><table class="pidol-table"><thead><tr><th>Support Card</th><th>Tier</th><th>ประเภท</th><th>Plan</th><th>วิธีได้รับ</th></tr></thead><tbody id="supportRows"></tbody></table></div>
+      <p class="empty-state dark-empty" id="supportEmpty" hidden>ไม่พบ Support Card ตามเงื่อนไขนี้</p><div class="db-credit dark-credit">Original guide/content: <a href="https://game8.jp/gakuen-idolmaster/609102" target="_blank" rel="noreferrer">Game8 — サポートカード評価一覧 ↗</a></div><a class="catalog-cta" href="catalog.html?type=supports">เปิดหน้ารวม Support Card ทั้งหมด →</a>
+    </section>
+
+    <section class="section skill-db" id="skills">
+      <div class="section-head"><div><span class="section-no">07</span><h2>Skill Card Database</h2></div><p>Cycle 5 · การ์ดสกิลทุก Plan<br><span>อ้างอิง 21.07.2026</span></p></div>
+      <figure class="source-cover light-cover"><img src="assets/game8/skills.jpg" alt="ภาพหน้าปก Skill Card จาก Game8" loading="lazy"><figcaption>Original guide/content: Game8</figcaption></figure>
+      <div class="db-toolbar skill-toolbar"><label class="db-search"><span>⌕</span><input id="skillSearch" type="search" placeholder="ค้นหาชื่อหรือคำอธิบายเอฟเฟกต์..." /></label><select id="skillPlan"><option value="all">ทุก Plan</option><option>Sense</option><option>Logic</option><option>Anomaly</option><option>Free</option></select><select id="skillRarity"><option value="all">ทุกระดับ</option><option>SSR</option><option>SR</option><option>R</option><option>N</option><option value="レジェンド">Legend</option></select></div>
+      <div class="result-summary light-summary"><b id="skillCount">0</b> รายการ <button id="skillReset">ล้างตัวกรอง</button></div>
+      <div class="skill-grid" id="skillGrid"></div><p class="empty-state" id="skillEmpty" hidden>ไม่พบ Skill Card ตามเงื่อนไขนี้</p>
+      <div class="db-credit">Original guide/content: <a href="https://game8.jp/gakuen-idolmaster/609737" target="_blank" rel="noreferrer">Game8 — スキルカード一覧 ↗</a></div><a class="catalog-cta dark-cta" href="catalog.html?type=skills">เปิดหน้ารวม Skill Card ทั้งหมด →</a>
+    </section>
+
+    <section class="section item-db" id="items">
+      <div class="section-head"><div><span class="section-no">08</span><h2>P Item &amp; Drink</h2></div><p>Cycle 6 · ฐานข้อมูลอุปกรณ์ครบชุด<br><span>อ้างอิง 21.07.2026</span></p></div>
+      <figure class="source-cover light-cover"><img src="assets/game8/pitems.jpg" alt="ภาพหน้าปก P Item จาก Game8" loading="lazy"><figcaption>Original guide/content: Game8</figcaption></figure>
+      <div class="item-tabs"><button class="item-tab active" data-kind="item">P Item <b id="itemTotal">0</b></button><button class="item-tab" data-kind="drink">P Drink <b id="drinkTotal">0</b></button></div>
+      <div class="db-toolbar item-toolbar"><label class="db-search"><span>⌕</span><input id="itemSearch" type="search" placeholder="ค้นหาชื่อหรือเอฟเฟกต์..." /></label><select id="itemPlan"><option value="all">ทุก Plan</option><option>Sense</option><option>Logic</option><option>Anomaly</option><option>Free</option></select></div>
+      <div class="result-summary light-summary"><b id="itemCount">0</b> รายการ <button id="itemReset">ล้างตัวกรอง</button></div><div class="item-grid" id="itemGrid"></div><p class="empty-state" id="itemEmpty" hidden>ไม่พบข้อมูลตามเงื่อนไขนี้</p>
+      <div class="db-credit item-source" id="itemSource">Original guide/content: <a href="https://game8.jp/gakuen-idolmaster/610077" target="_blank" rel="noreferrer">Game8 — Pアイテム一覧 ↗</a></div><div class="catalog-cta-row"><a class="catalog-cta dark-cta" href="catalog.html?type=items">P Item ทั้งหมด →</a><a class="catalog-cta dark-cta" href="catalog.html?type=drinks">P Drink ทั้งหมด →</a></div>
+    </section>
+
+    <section class="section scenario-hub" id="scenarios">
+      <div class="section-head light"><div><span class="section-no">09</span><h2>Scenario Guide Hub</h2></div><p>Cycle 7 · เส้นทาง Produce<br><span>ตั้งแต่ 初 ถึง H.I.F S4+</span></p></div>
+      <figure class="source-cover"><img src="assets/game8/nia.jpg" alt="ภาพหน้าปก Scenario N.I.A จาก Game8" loading="lazy"><figcaption>Original guide/content: Game8</figcaption></figure>
+      <div class="scenario-grid" id="scenarioGrid"></div>
+      <p class="scenario-notice">คำแปลและการเรียบเรียงภาษาไทยจากคู่มือ Game8 · แต่ละรายการมีลิงก์ไปยังบทความต้นฉบับโดยตรง</p>
+    </section>
+
+    <section class="section systems" id="systems">
+      <div class="section-head light">
+        <div><span class="section-no">04</span><h2>รู้จัก 3 สาย</h2></div>
+        <p>หัวใจของการเลือกการ์ด<br>และการวางแผนทำคะแนน</p>
+      </div>
+      <div class="system-tabs" role="tablist">
+        <button class="system-tab active" data-system="sense">01 — SENSE</button>
+        <button class="system-tab" data-system="logic">02 — LOGIC</button>
+        <button class="system-tab" data-system="anomaly">03 — ANOMALY</button>
+      </div>
+      <div class="system-panel" id="systemPanel">
+        <div class="system-number">01</div>
+        <div><span class="jp-title">センス</span><h3>สะสมพลัง แล้วระเบิดคะแนน</h3><p>บริหาร <b>集中 (สมาธิ)</b> และ <b>好調 (ฟอร์มดี)</b> ก่อนใช้การ์ดทำคะแนนแรงในจังหวะสำคัญ เหมาะกับคนที่ชอบวางคอมโบชัดเจน</p></div>
+        <div class="system-flow"><span>集中</span><i>＋</i><span>好調</span><i>→</i><strong>SCORE</strong></div>
+      </div>
+    </section>
+
+    <section class="section glossary" id="glossary">
+      <div class="section-head">
+        <div><span class="section-no">05</span><h2>พจนานุกรมโปรดิวเซอร์</h2></div>
+        <p>ค้นได้ทั้งญี่ปุ่น ไทย และอังกฤษ<br><span id="wordCount"></span></p>
+      </div>
+      <label class="big-search">
+        <span>⌕</span>
+        <input id="glossarySearch" type="search" placeholder="ลองค้นหา: 親愛度, ความสนิท, support..." autocomplete="off" />
+        <kbd>ESC</kbd>
+      </label>
+      <div class="filter-row" id="filterRow">
+        <button class="filter active" data-filter="all">ทั้งหมด</button>
+        <button class="filter" data-filter="produce">โปรดิวซ์</button>
+        <button class="filter" data-filter="status">สถานะ</button>
+        <button class="filter" data-filter="item">ไอเทม</button>
+        <button class="filter" data-filter="general">ทั่วไป</button>
+      </div>
+      <div class="word-list" id="wordList"></div>
+      <p class="empty-state" id="emptyState" hidden>ไม่พบคำนี้ — ลองค้นด้วยคำที่สั้นลง</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand footer-brand"><span class="brand-mark">G</span><span>GAKUMAS <b>TH</b></span></div>
+    <p>คู่มือแฟนเมดภาษาไทย · ไม่ได้ดำเนินงานหรือรับรองอย่างเป็นทางการโดย Game8<br>Original guide/content: Game8 · ภาพที่ใช้มาจากหน้าคู่มือต้นฉบับที่ได้รับอนุญาต</p>
+    <div class="footer-links"><a href="https://game8.jp/gakuen-idolmaster" target="_blank" rel="noreferrer">แหล่งอ้างอิง Game8 ↗</a><a href="CONTENT_RIGHTS.md">ขอบเขตสิทธิ์และเครดิต</a></div>
+  </footer>
+
+  <dialog id="searchDialog">
+    <button class="dialog-close" id="dialogClose" aria-label="ปิด">×</button>
+    <p class="eyebrow">QUICK SEARCH</p>
+    <h2>กำลังหาอะไรอยู่?</h2>
+    <input id="quickSearch" type="search" aria-label="ค้นหาทุกฐานข้อมูล" placeholder="H.I.F, มือใหม่, Sense, คำศัพท์..." />
+    <div id="quickResults" aria-live="polite"><p class="search-hint">ค้นหาได้ทั้ง P Idol, Support, Skill, Item, Drink, Scenario และคำศัพท์</p></div>
+  </dialog>
+  <dialog id="articleDialog" class="article-dialog">
+    <button class="dialog-close" id="articleClose" aria-label="ปิด">×</button>
+    <article id="articleContent"></article>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="characters.js"></script>
+  <script src="pidols.js"></script>
+  <script src="supportcards.js"></script>
+  <script src="skillcards.js"></script>
+  <script src="itemdata.js"></script>
+  <script src="catalog-translations.js"></script>
+  <script src="scenarios.js"></script>
+  <script src="articles.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

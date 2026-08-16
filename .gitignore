@@ -1,0 +1,8 @@
+translation-cache-ja-th.json
+deep-details-ja.json
+deep-details-th.json
+deep-details.json
+.vercel/
+__pycache__/
+*.pyc
+

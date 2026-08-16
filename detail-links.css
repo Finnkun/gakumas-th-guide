@@ -1,0 +1,2 @@
+.data-detail-link{color:var(--lime);text-decoration:none}.data-detail-link.dark-link{color:var(--ink)}.data-detail-link:hover{text-decoration:underline}
+.catalog-cta{display:inline-block;margin-top:20px;background:var(--lime);color:var(--ink);padding:11px 16px;text-decoration:none;font-weight:700}.catalog-cta.dark-cta{background:var(--ink);color:white}.catalog-cta-row{display:flex;gap:8px;flex-wrap:wrap}
