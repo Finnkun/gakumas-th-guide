@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/609099":{"title":"【学マス】SSRキャラ一覧とおすすめ選び方【学園アイドルマスター】","originalTitle":"【学マス】SSRキャラ一覧とおすすめ選び方【学園アイドルマスター】","updated":"","sections":[],"originalSections":[],"extractionStatus":"source-mismatch","reviewStatus":"unreviewed"}};

@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/610077":{"title":"【学マス】Pアイテム一覧【学園アイドルマスター】","originalTitle":"【学マス】Pアイテム一覧【学園アイドルマスター】","updated":"","sections":[],"originalSections":[],"extractionStatus":"source-mismatch","reviewStatus":"unreviewed"}};

@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/610116":{"title":"【学マス】はつぼしブレスレットの解放条件と効果【学園アイドルマスター】","originalTitle":"【学マス】はつぼしブレスレットの解放条件と効果【学園アイドルマスター】","updated":"","sections":[],"originalSections":[{"level":2,"title":"はつぼしブレスレットの解放条件","blocks":[{"type":"table","rows":[["はつぼしブレスレット"]]}]},{"level":2,"title":"はつぼしブレスレットの効果","blocks":[{"type":"table","rows":[["SPレッスン終了時、体力消費3スキルカードを選択して強化"]]}]}],"extractionStatus":"extracted","reviewStatus":"unreviewed"}};

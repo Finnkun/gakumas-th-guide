@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/688507":{"title":"【学マス】N.I.Aバンド（金黒）の解放条件と効果【学園アイドルマスター】","originalTitle":"【学マス】N.I.Aバンド（金黒）の解放条件と効果【学園アイドルマスター】","updated":"","sections":[],"originalSections":[{"level":2,"title":"N.I.Aバンド（金黒）の解放条件","blocks":[{"type":"table","rows":[["NIAバンド（金黒）"]]}]},{"level":2,"title":"N.I.Aバンド（金黒）の効果","blocks":[{"type":"table","rows":[["ターン開始時、山札か捨札にあるスキルカードが18枚以上の場合、パラメータ上昇量増加25％\n全力効果のスキルカードのパラメータ値増加+10"]]}]}],"extractionStatus":"extracted","reviewStatus":"unreviewed"}};

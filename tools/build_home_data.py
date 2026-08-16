@@ -35,7 +35,7 @@ for output_name, (filename, variable, limit) in sources.items():
     parts.append(f"window.{output_name} = {json.dumps(records, ensure_ascii=False, separators=(',', ':'))};")
     kind = {"supportCards":"supports","skillCards":"skills","pItems":"items","pDrinks":"drinks"}.get(output_name, output_name)
     for record in all_records:
-        search_records.append({"type":kind,"id":record.get("id"),"name":record.get("short") or record.get("name",""),"text":" ".join(str(record.get(k,"")) for k in ("name","short","idol","characterName","characterRomaji","characterThai","searchAliases","style","plan","rarity","tier","obtain"))[:600]})
+        search_records.append({"type":kind,"id":record.get("id"),"name":record.get("short") or record.get("name",""),"text":" ".join(str(record.get(k,"")) for k in ("name","short","idol","characterName","characterRomaji","characterThai","searchAliases","originalEffect","style","plan","rarity","tier","obtain"))[:1200]})
 
 (ROOT / "home-data.js").write_text("\n".join(parts) + "\n", encoding="utf-8")
 (ROOT / "search-index.js").write_text("window.searchIndex=" + json.dumps(search_records, ensure_ascii=False, separators=(',', ':')) + ";\n", encoding="utf-8")

@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/688500":{"title":"【学マス】N.I.Aパスケースの解放条件と効果【学園アイドルマスター】","originalTitle":"【学マス】N.I.Aパスケースの解放条件と効果【学園アイドルマスター】","updated":"","sections":[],"originalSections":[{"level":2,"title":"N.I.Aパスケースの解放条件","blocks":[{"type":"table","rows":[["NIAパスケース"]]}]},{"level":2,"title":"N.I.Aパスケースの効果","blocks":[{"type":"table","rows":[["自治会イベント会場の営業終了後、Pポイント+40（プロデュース中2回）"]]}]}],"extractionStatus":"extracted","reviewStatus":"unreviewed"}};

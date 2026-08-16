@@ -19,6 +19,7 @@ for filename,variable,label in SOURCES:
         if label=='P Idol':
             names=[jp for jp in CHARACTERS if jp in item.get('name','')]
             if len(names)!=1:issues.append(f'{label}:{key}: expected one known character, got {names}')
+            elif item.get('characterName') and item['characterName']!=names[0]:issues.append(f'{label}:{key}: characterName does not match card name')
 details=json.loads((ROOT/'deep-details-th.json').read_text(encoding='utf-8')).get('details',{})
 for url,article in details.items():
     if article.get('reviewStatus')!='reviewed':continue

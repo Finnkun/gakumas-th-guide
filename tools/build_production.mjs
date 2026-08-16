@@ -6,6 +6,7 @@ import { execFileSync } from "node:child_process";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 execFileSync("python", [path.join(root,"tools","audit_content.py")], {stdio:"inherit"});
+execFileSync("python", [path.join(root,"tools","build_detail_drafts.py")], {stdio:"inherit"});
 const context = { window: {} };
 vm.createContext(context);
 vm.runInContext(fs.readFileSync(path.join(root, "articles.js"), "utf8"), context);

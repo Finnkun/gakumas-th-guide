@@ -1,5 +1,5 @@
 """Extract only item-specific article content from referenced Game8 pages."""
-import concurrent.futures, html, json, re, urllib.request
+import argparse, concurrent.futures, html, json, re, time, urllib.error, urllib.request
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -31,7 +31,8 @@ def clean(fragment):
     return value.strip()
 
 def compact(value):
-    return re.sub(r'[\s\[\]［］「」『』【】()（）・!！?？,，。]','',value or '')
+    value=re.sub(r'\([^)]*\)|（[^）]*）','',value or '').replace('はじまる','始まる')
+    return re.sub(r'[\s\[\]［］「」『』【】()（）・.!！?？,，。]','',value)
 
 def identity_matches(title,expected):
     page=compact(title)
@@ -49,7 +50,14 @@ def parse_table(fragment):
     return rows
 
 def parse_page(url,expected):
-    raw=urllib.request.urlopen(urllib.request.Request(url,headers=HEADERS),timeout=45).read().decode('utf-8','ignore')
+    raw=None
+    for attempt in range(5):
+        try:
+            time.sleep(.2)
+            raw=urllib.request.urlopen(urllib.request.Request(url,headers=HEADERS),timeout=45).read().decode('utf-8','ignore');break
+        except (urllib.error.HTTPError,urllib.error.URLError):
+            if attempt==4:raise
+            time.sleep(2**attempt)
     title_match=re.search(r'<h1[^>]*itemprop=["\']name["\'][^>]*>(.*?)</h1>',raw,re.S|re.I)
     title=clean(title_match.group(1)) if title_match else ""
     base={"title":title,"updated":"","sections":[],"reviewStatus":"unreviewed"}
@@ -87,9 +95,12 @@ previous_file=ROOT/'deep-details-ja.json'
 if previous_file.exists():
     try:previous=json.loads(previous_file.read_text(encoding='utf-8')).get('details',{})
     except (json.JSONDecodeError,OSError):pass
+parser=argparse.ArgumentParser();parser.add_argument('--start',type=int,default=0);parser.add_argument('--limit',type=int,default=0);parser.add_argument('--url',action='append',default=[]);args=parser.parse_args()
+targets=args.url or sorted(records_by_url)[args.start:args.start+args.limit if args.limit else None]
+targets=[url for url in targets if url in records_by_url]
 details=dict(previous);failures=[]
-with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
-    futures={executor.submit(parse_page,url,records_by_url[url]):url for url in sorted(records_by_url)}
+with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+    futures={executor.submit(parse_page,url,records_by_url[url]):url for url in targets}
     for future in concurrent.futures.as_completed(futures):
         try:
             url,data=future.result();details[url]=data
@@ -98,4 +109,4 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
 payload={"details":details,"failures":failures}
 for name in ('deep-details.json','deep-details-ja.json'):(ROOT/name).write_text(json.dumps(payload,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
 (ROOT/'deep-details.js').write_text('window.deepDetails = '+json.dumps(details,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf-8')
-print(json.dumps({"requested":len(records_by_url),"stored":len(details),"failed":len(failures),"mismatched":sum(x.get('extractionStatus')=='source-mismatch' for x in details.values()),"with_sections":sum(bool(x['sections']) for x in details.values())},ensure_ascii=False))
+print(json.dumps({"requested":len(targets),"stored":len(details),"failed":len(failures),"mismatched":sum(x.get('extractionStatus')=='source-mismatch' for x in details.values()),"with_sections":sum(bool(x['sections']) for x in details.values())},ensure_ascii=False))

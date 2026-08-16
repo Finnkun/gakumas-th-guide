@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/610117":{"title":"【学マス】はつぼし手帳の解放条件と効果【学園アイドルマスター】","originalTitle":"【学マス】はつぼし手帳の解放条件と効果【学園アイドルマスター】","updated":"","sections":[],"originalSections":[{"level":2,"title":"はつぼし手帳の解放条件","blocks":[{"type":"table","rows":[["はつぼし手帳"]]}]},{"level":2,"title":"はつぼし手帳の効果","blocks":[{"type":"table","rows":[["ターン開始時集中が5以上の場合、スキルカード使用数追加+1\n集中+2（レッスン内1回）"]]}]}],"extractionStatus":"extracted","reviewStatus":"unreviewed"}};

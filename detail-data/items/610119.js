@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/610119":{"title":"【学マス】はつぼしキーホルダーの解放条件と効果【学園アイドルマスター】","originalTitle":"【学マス】はつぼしキーホルダーの解放条件と効果【学園アイドルマスター】","updated":"","sections":[],"originalSections":[{"level":2,"title":"はつぼしキーホルダーの解放条件","blocks":[{"type":"table","rows":[["はつぼしキーホルダー"]]}]},{"level":2,"title":"はつぼしキーホルダーの効果","blocks":[{"type":"table","rows":[["ターン開始時好印象が3以上の場合、スキルカード使用数追加+1\n好印象+3（レッスン内1回）"]]}]}],"extractionStatus":"extracted","reviewStatus":"unreviewed"}};

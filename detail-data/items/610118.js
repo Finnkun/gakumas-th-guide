@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/610118":{"title":"【学マス】はつぼしTシャツの解放条件と効果【学園アイドルマスター】","originalTitle":"【学マス】はつぼしTシャツの解放条件と効果【学園アイドルマスター】","updated":"","sections":[],"originalSections":[{"level":2,"title":"はつぼしTシャツの解放条件","blocks":[{"type":"table","rows":[["はつぼしTシャツ"]]}]},{"level":2,"title":"はつぼしTシャツの効果","blocks":[{"type":"table","rows":[["ターン開始時好調状態の場合、スキルカード使用数追加+1\n好調2ターン（レッスン内1回）"]]}]}],"extractionStatus":"extracted","reviewStatus":"unreviewed"}};

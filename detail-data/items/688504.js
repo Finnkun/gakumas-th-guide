@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/688504":{"title":"【学マス】N.I.Aライト（金白）の解放条件と効果【学園アイドルマスター】","originalTitle":"【学マス】N.I.Aライト（金白）の解放条件と効果【学園アイドルマスター】","updated":"","sections":[],"originalSections":[{"level":2,"title":"N.I.Aライト（金白）の解放条件","blocks":[{"type":"table","rows":[["NIAライト（金白）"]]}]},{"level":2,"title":"N.I.Aライト（金白）の効果","blocks":[{"type":"table","rows":[["ターン開始時、山札から捨札にあるスキルカードが12枚以上の場合、スキルカードを引く\nパラメータ上昇量増加5％\nやる気+1（レッスン内5回）"]]}]}],"extractionStatus":"extracted","reviewStatus":"unreviewed"}};

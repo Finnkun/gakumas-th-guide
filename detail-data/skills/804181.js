@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/804181":{"title":"【学マス】初めてのたのしみの解放条件と効果【学園アイドルマスター】","originalTitle":"【学マス】初めてのたのしみの解放条件と効果【学園アイドルマスター】","updated":"","sections":[],"originalSections":[],"extractionStatus":"extracted","reviewStatus":"unreviewed"}};

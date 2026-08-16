@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/610120":{"title":"【学マス】マスコット（非公認）の解放条件と効果【学園アイドルマスター】","originalTitle":"【学マス】マスコット（非公認）の解放条件と効果【学園アイドルマスター】","updated":"","sections":[],"originalSections":[{"level":2,"title":"マスコット（非公認）の解放条件","blocks":[{"type":"table","rows":[["マスコット（非公認）"]]}]},{"level":2,"title":"マスコット（非公認）の効果","blocks":[{"type":"table","rows":[["ターン開始時やる気が5以上の場合、スキルカード使用数追加+1\nやる気+3（レッスン内1回）"]]}]}],"extractionStatus":"extracted","reviewStatus":"unreviewed"}};

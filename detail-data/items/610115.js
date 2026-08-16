@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/610115":{"title":"【学マス】はつぼしブローチの解放条件と効果【学園アイドルマスター】","originalTitle":"【学マス】はつぼしブローチの解放条件と効果【学園アイドルマスター】","updated":"","sections":[],"originalSections":[{"level":2,"title":"はつぼしブローチの解放条件","blocks":[{"type":"table","rows":[["はつぼしブローチ"]]}]},{"level":3,"title":"解放条件","blocks":[{"type":"table","rows":[["中間試験クリア後に入手"]]}]},{"level":2,"title":"はつぼしブローチの効果","blocks":[{"type":"table","rows":[["レッスン終了時、レッスン報酬のスキルカードの選択肢を追加"]]}]}],"extractionStatus":"extracted","reviewStatus":"unreviewed"}};

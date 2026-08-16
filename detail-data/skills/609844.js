@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/609844":{"title":"【学マス】愛嬌の評価と効果【学園アイドルマスター】","originalTitle":"【学マス】愛嬌の評価と効果【学園アイドルマスター】","updated":"","sections":[],"originalSections":[{"level":3,"title":"愛嬌","blocks":[{"type":"table","rows":[["スキルカード","評価"],["愛嬌",""]]},{"type":"p","text":"▶︎最強スキルカードランキングはこちら"}]},{"level":3,"title":"スキルカードの効果","blocks":[{"type":"table","rows":[["パラメータ+13\n ※"]]}]},{"level":3,"title":"強化状態（+）の効果","blocks":[{"type":"table","rows":[["パラメータ+21\n ※"]]}]}],"extractionStatus":"extracted","reviewStatus":"unreviewed"}};

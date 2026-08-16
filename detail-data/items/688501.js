@@ -1,1 +1,1 @@
-window.deepDetails={};
+window.deepDetails={"https://game8.jp/gakuen-idolmaster/688501":{"title":"【学マス】N.I.Aトートバッグの解放条件と効果【学園アイドルマスター】","originalTitle":"【学マス】N.I.Aトートバッグの解放条件と効果【学園アイドルマスター】","updated":"","sections":[],"originalSections":[{"level":2,"title":"N.I.Aトートバッグの解放条件","blocks":[{"type":"table","rows":[["NIAトートバッグ"]]}]},{"level":2,"title":"N.I.Aトートバッグの効果","blocks":[{"type":"table","rows":[["企業イベント会場の営業終了じ、ランダムなPドリンク（SR以上）を2つ獲得（プロデュース中2回）"]]}]}],"extractionStatus":"extracted","reviewStatus":"unreviewed"}};
