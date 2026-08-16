@@ -1,1 +1,1 @@
-window.deepDetails={"https://game8.jp/gakuen-idolmaster/804179":{"title":"【Gakumasu】เงื่อนไขการปลดล็อกและผลของความรู้สึกครั้งแรก【Gakuen Idol Master】","updated":"","sections":[],"originalTitle":"【学マス】初めての想いの解放条件と効果【学園アイドルマスター】","originalSections":[]}};
+window.deepDetails={};

@@ -2,8 +2,10 @@ import fs from "node:fs";
 import path from "node:path";
 import vm from "node:vm";
 import { fileURLToPath } from "node:url";
+import { execFileSync } from "node:child_process";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+execFileSync("python", [path.join(root,"tools","audit_content.py")], {stdio:"inherit"});
 const context = { window: {} };
 vm.createContext(context);
 vm.runInContext(fs.readFileSync(path.join(root, "articles.js"), "utf8"), context);
@@ -12,6 +14,8 @@ for (const filename of ["pidols.js", "supportcards.js", "skillcards.js", "itemda
 vm.runInContext(fs.readFileSync(path.join(root, "deep-details.js"), "utf8"), context);
 const base = "https://finnkun.github.io/gakumas-th-guide";
 const esc = value => String(value).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const typeLabels={pidols:"P Idol",supports:"Support Card",skills:"Skill Card",items:"P Item",drinks:"P Drink"};
+const metaDescription=(item,type)=>{const reviewedText=item.reviewStatus==="reviewed"?(item.effect||item.note||""):"";const raw=`${item.short||item.name} — ${typeLabels[type]} ${item.plan||""} ${item.rarity||item.tier||""}. ${reviewedText||"ข้อมูลรายการและแหล่งอ้างอิงจาก Game8; คำแปลเอฟเฟกต์อยู่ระหว่างตรวจ"}`.replace(/\s+/g," ").trim();if(raw.length<=155)return raw;const cut=raw.slice(0,152);return cut.slice(0,Math.max(cut.lastIndexOf(" "),110)).trim()+"…"};
 
 for (const [id, article] of Object.entries(articles)) {
   const dir = path.join(root, "guides", id);
@@ -31,12 +35,12 @@ for (const [type, items] of Object.entries(groups)) for (const item of items) {
   fs.mkdirSync(dir, { recursive: true });
   const url = `${base}/database/${type}/${encodeURIComponent(id)}/`;
   const name = item.short || item.name;
-  const description = `${name} — ${item.plan || ""} ${item.rarity || item.tier || ""} ${item.effect || item.note || ""}`.trim().slice(0, 220);
+  const description = metaDescription(item,type);
   const image = String(item.image || "assets/app-icon.svg").replace(/^\.\//, "");
-  const jsonLd = {"@context":"https://schema.org","@type":"WebPage",name,description,url,breadcrumb:{"@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"หน้าหลัก",item:`${base}/`},{"@type":"ListItem",position:2,name:type,item:`${base}/catalog.html?type=${type}`},{"@type":"ListItem",position:3,name}]}};
+  const jsonLd = {"@context":"https://schema.org","@type":"WebPage",name,description,url,breadcrumb:{"@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"หน้าหลัก",item:`${base}/`},{"@type":"ListItem",position:2,name:typeLabels[type],item:`${base}/catalog.html?type=${type}`},{"@type":"ListItem",position:3,name}]}};
   let html = detailTemplate
     .replace("<head>", "<head>")
-    .replace("<title>รายละเอียด — GAKUMAS TH</title>", `<title>${esc(name)} — GAKUMAS TH</title>`)
+    .replace("<title>รายละเอียด — GAKUMAS TH</title>", `<title>${esc(name)} — ${typeLabels[type]} | GAKUMAS TH</title>`)
     .replace('<meta name="description" content="รายละเอียดข้อมูล Gakuen Idolmaster ภาษาไทย">', `<meta name="description" content="${esc(description)}"><link rel="canonical" href="${url}"><meta property="og:type" content="article"><meta property="og:site_name" content="GAKUMAS TH"><meta property="og:title" content="${esc(name)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${url}"><meta property="og:image" content="${base}/${esc(image)}"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`)
     .replace("<body>", `<body data-type="${type}" data-id="${esc(id)}">`)
     .replace('data-page="detail"', `data-page="detail" data-type="${type}"`)
