@@ -21,13 +21,14 @@ for filename,variable,label in SOURCES:
             names=[jp for jp in CHARACTERS if jp in item.get('name','')]
             if len(names)!=1:issues.append(f'{label}:{key}: expected one known character, got {names}')
             elif item.get('characterName') and item['characterName']!=names[0]:issues.append(f'{label}:{key}: characterName does not match card name')
-details=json.loads((ROOT/'deep-details-th.json').read_text(encoding='utf-8')).get('details',{})
+manual_file=ROOT/'manual-deep-translations.json'
+details=json.loads(manual_file.read_text(encoding='utf-8')) if manual_file.exists() else {}
 for url,article in details.items():
-    if article.get('reviewStatus')!='reviewed':continue
     values=[]
     for section in article.get('sections',[]):
         values.append(section.get('title',''))
         for block in section.get('blocks',[]):values += [block.get('text',''),*block.get('items',[]),*[c for row in block.get('rows',[]) for c in row]]
     for value in values:
         for problem in lint_text(value):issues.append(f'{url}: {problem}: {value[:80]}')
+    if not any(re.search(r'[ก-๙]',value) for value in values):issues.append(f'{url}: reviewed article has no Thai content')
 print(json.dumps({'issues':len(issues),'sample':issues[:100]},ensure_ascii=False,indent=2));sys.exit(1 if issues else 0)
